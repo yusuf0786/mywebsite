@@ -1,0 +1,299 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 25px;
+    font-family: Arial;
+    
+    scroll-behavior: smooth !important;    /* ----- THE SECRET ---- */
+}
+
+.inner{
+    width: 90%;
+    margin: 0 5%;
+}
+
+header{
+    width: 100%;
+    height: 48px;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 8px;
+    padding-left: 10px;
+    background-color: #0f0f0f;
+    position: absolute;
+    top: 0;
+    z-index: 10;
+}
+
+header .logo{
+    color: coral;
+    font-weight: 900;
+    font-style: italic;
+    letter-spacing: 1px;
+}
+
+nav{
+    display: flex;
+}
+
+ul{
+    display: flex;
+}
+
+li{
+    list-style: none;
+    padding-right: 28px;
+}
+
+li a{
+    text-decoration: none;
+    color: cornflowerblue;
+}
+
+header nav button{
+    padding: 0 4px;
+    font-size: 0.8rem;
+    background: none;
+    border: 0;
+    border-radius: 4px;
+    display: none;
+}
+
+#btn-check{
+    color: cornflowerblue;
+}
+
+#btn-close{
+    color: red;
+}
+
+.merg{
+    position: relative;
+    top: 48px;
+}
+
+/* video */
+#video1{
+    width: 100%;
+    position: relative;
+    top: 0;
+    z-index: 0;
+}
+
+/* section top-page */
+
+.top-page{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+}
+
+.top-page button{
+    margin-top: 23%;
+    border: 0;
+    background: none;
+    cursor: pointer;
+    width: 200px;
+}
+
+.top-page a{
+    text-decoration: none;
+    animation: btnstart 3s linear 0s infinite  forwards;
+}
+
+@keyframes btnstart{
+
+    0%{
+        color: blue;
+    }
+    10%{
+        color: green;
+    }
+    20%{
+        color: greenyellow;
+    }
+    30%{
+        color: orange;
+    }
+    40%{
+        color: orangered;
+    }
+    50%{
+        color: red;
+    }
+    60%{
+        color: coral;
+    }
+    70%{
+        color: tomato;
+    }
+    80%{
+        color: cornflowerblue;
+    }
+    90%{
+        color: skyblue;
+    }
+    100%{
+        color: blue;
+    }
+}
+
+/* start */
+
+#start{
+    width: 100%;
+    height: 948px;
+    position: relative;
+    top: 40px;
+}
+
+#start ul{
+    background-color: #0f0f0f;
+    padding: 10px 10px;
+}
+
+#start .navbtnwork{
+    color: cornflowerblue;
+    cursor: pointer;
+    opacity: 0;
+}
+
+#video2{
+    position: relative;
+    z-index: 0;
+}
+
+#start main{
+    position: absolute;
+    top: 150px;
+}
+
+#start .layouts{
+    padding: 0 2%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    opacity: 0;
+}
+
+#layout1, #layout2, #layout3{
+    width: 28%;
+    height: 200px;
+    border: 1px solid  coral;
+    border-radius: 5px;
+    text-align: center;
+    -webkit-background-clip: text;
+    color: transparent;
+    line-height: 38px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    /* transition: all 1s linear 0s; */
+}
+
+#layout1{
+    background-image: url("../img/Screenshot.png");
+}
+
+#layout2{
+    background-image: url("../img/Screenshot\ 2.png");
+    color: #694477;
+}
+
+#layout3{
+    background-image: url("../img/Screenshot\ 3.png");
+    color: purple;
+}
+
+#layout1 a, #layout2 a, #layout3 a{
+    color: inherit;
+    text-decoration: none;
+}
+
+#layout1 span, #layout2 span, #layout3 span{
+    margin-top: 58px;
+}
+
+#layout1:hover, #layout2:hover, #layout3:hover{
+    -webkit-background-clip: border-box;
+    color: transparent;
+}
+
+#work{
+    border-bottom: 0px solid cornflowerblue;
+}
+#home1, #home2{
+    border-bottom: 0px solid cornflowerblue;
+}
+
+/* footer */
+
+footer{
+    padding: 10px 0px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    background-color: #fff;
+}
+
+footer .social a{
+    font-size: 1.2rem;
+    text-decoration: none;
+    letter-spacing: 38px;
+    color: coral;
+}
+
+
+
+
+
+
+@media only screen and (max-width: 767px){
+
+    body{
+        background-color: #000;
+    }
+
+    nav ul{
+        opacity: 0;
+    }
+
+    li a{
+        font-size: 0.8rem;
+        padding-top: 4px;
+    }
+
+    #btn-check{
+        display: block;
+        margin-right: 10px;
+    }
+
+    #btn-close{
+        margin-right: 10px;
+        padding: 0 6px;
+    }
+
+
+
+
+    #start ul li{
+        opacity: 0;
+    }
+
+    #start main{
+       top: 80px;
+    }
+
+    #start .navbtnwork{
+        opacity: 1;
+    }
+
+    #layout1, #layout2, #layout3{
+        width: 100%;
+        margin-bottom: 38px;
+    }
+}
