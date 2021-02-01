@@ -51,12 +51,11 @@ li a{
     color: cornflowerblue;
 }
 
-header nav button{
+header button{
     padding: 0 4px;
     font-size: 0.8rem;
     background: none;
     border: 0;
-    border-radius: 4px;
     display: none;
 }
 
@@ -295,5 +294,14 @@ footer .social a{
     #layout1, #layout2, #layout3{
         width: 100%;
         margin-bottom: 38px;
+    }
+}
+
+
+
+@media only screen and (max-width:478px){
+
+    nav ul li a{
+        font-size: 0.6rem;
     }
 }
