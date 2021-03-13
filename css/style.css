@@ -303,6 +303,10 @@ footer .social a{
         padding: 0 6px;
     }
 
+    .merg{
+        height: 50vh;
+    }
+
 
     #start ul li{
         opacity: 0;
