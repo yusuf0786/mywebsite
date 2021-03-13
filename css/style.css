@@ -4,7 +4,6 @@
     box-sizing: border-box;
     font-size: 25px;
     font-family: Arial;
-    
     scroll-behavior: smooth !important;    /* ----- THE SECRET ---- */
 }
 
@@ -12,6 +11,8 @@
     width: 90%;
     margin: 0 5%;
 }
+
+/* header starts */
 
 header{
     width: 100%;
@@ -51,11 +52,12 @@ li a{
     color: cornflowerblue;
 }
 
-header button{
+header nav button{
     padding: 0 4px;
     font-size: 0.8rem;
     background: none;
     border: 0;
+    border-radius: 4px;
     display: none;
 }
 
@@ -68,6 +70,8 @@ header button{
 }
 
 .merg{
+    width: 100%;
+    height: 100vh;
     position: relative;
     top: 48px;
 }
@@ -75,12 +79,13 @@ header button{
 /* video */
 #video1{
     width: 100%;
+    height: 100%;
     position: relative;
     top: 0;
     z-index: 0;
 }
 
-/* section top-page */
+/* top-page starts */
 
 .top-page{
     width: 100%;
@@ -101,51 +106,40 @@ header button{
 
 .top-page a{
     text-decoration: none;
-    animation: btnstart 3s linear 0s infinite  forwards;
+    animation: btnstart 3s linear 0s infinite forwards;
 }
 
 @keyframes btnstart{
 
-    0%{
-        color: blue;
-    }
-    10%{
-        color: green;
-    }
-    20%{
-        color: greenyellow;
-    }
-    30%{
-        color: orange;
-    }
-    40%{
-        color: orangered;
-    }
-    50%{
-        color: red;
-    }
-    60%{
-        color: coral;
-    }
-    70%{
-        color: tomato;
-    }
-    80%{
-        color: cornflowerblue;
-    }
-    90%{
-        color: skyblue;
-    }
-    100%{
-        color: blue;
-    }
+    0%{color: blue;}
+
+    10%{color: green;}
+
+    20%{color: greenyellow;}
+
+    30%{color: orange;}
+
+    40%{color: orangered;}
+
+    50%{color: red;}
+
+    60%{color: coral;}
+
+    70%{color: tomato;}
+
+    80%{color: cornflowerblue;}
+
+    90%{color: skyblue;}
+
+    100%{color: blue;}
+
 }
 
-/* start */
+/* start starts */
 
 #start{
     width: 100%;
-    height: 948px;
+    min-height: 100%;
     position: relative;
     top: 40px;
 }
@@ -182,9 +176,11 @@ header button{
 #layout1, #layout2, #layout3{
     width: 28%;
     height: 200px;
+    padding-top: 58px;
     border: 1px solid  coral;
     border-radius: 5px;
     text-align: center;
+    background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
     line-height: 38px;
@@ -192,6 +188,25 @@ header button{
     background-position: center;
     background-size: cover;
     /* transition: all 1s linear 0s; */
+    transition-duration: 1s;
+}
+#layout4, #layout5, #layout6{
+    width: 28%;
+    height: 200px;
+    padding-top: 58px;
+    border: 1px solid  coral;
+    border-radius: 5px;
+    text-align: center;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    line-height: 38px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    /* transition: all 1s linear 0s; */
+    transition-duration: 1s;
+    margin-top: 78px;
 }
 
 #layout1{
@@ -207,19 +222,30 @@ header button{
     background-image: url("../img/Screenshot\ 3.png");
     color: purple;
 }
+#layout4{
+    background-image: url("../img/Alchemy.png");
+    
+}
+#layout5{
+    background-image: url("../img/Zaza.png");
+    
+}
+#layout6{
+    background-image: url("../img/Cascade.png");
+    
+}
 
-#layout1 a, #layout2 a, #layout3 a{
+#layout1 a, #layout2 a, #layout3 a, #layout4 a, #layout5 a, #layout6 a{
     color: inherit;
     text-decoration: none;
+    transition-duration: 1s;
 }
 
-#layout1 span, #layout2 span, #layout3 span{
-    margin-top: 58px;
-}
-
-#layout1:hover, #layout2:hover, #layout3:hover{
+#layout1:hover, #layout2:hover, #layout3:hover, #layout4:hover, #layout5:hover, #layout6:hover{
+    background-clip: border-box;
     -webkit-background-clip: border-box;
     color: transparent;
+    transform: scale(1.4) rotateY(360deg);    /* <- importan */
 }
 
 #work{
@@ -229,7 +255,8 @@ header button{
     border-bottom: 0px solid cornflowerblue;
 }
 
-/* footer */
+
+/* footer starts */
 
 footer{
     padding: 10px 0px;
@@ -246,9 +273,11 @@ footer .social a{
     color: coral;
 }
 
-
-
-
+@media only screen and (max-width:1100px){
+    footer{
+        display: none;
+    }
+}
 
 
 @media only screen and (max-width: 767px){
@@ -257,51 +286,90 @@ footer .social a{
         background-color: #000;
     }
 
+
     nav ul{
         opacity: 0;
     }
-
     li a{
         font-size: 0.8rem;
         padding-top: 4px;
     }
-
     #btn-check{
         display: block;
         margin-right: 10px;
     }
-
     #btn-close{
         margin-right: 10px;
         padding: 0 6px;
     }
 
 
-
-
     #start ul li{
         opacity: 0;
     }
-
     #start main{
        top: 80px;
     }
-
     #start .navbtnwork{
         opacity: 1;
     }
-
-    #layout1, #layout2, #layout3{
+    #layout1, #layout2, #layout3, #layout4, #layout5, #layout6{
         width: 100%;
         margin-bottom: 38px;
+        margin-top: 0;
+    }
+    #layout1:hover, #layout2:hover, #layout3:hover, #layout4:hover, #layout5:hover, #layout6:hover{
+        transform: scale(1.1) rotateY(360deg);    /* <- importan */
     }
 }
 
+@media only screen and (max-width:490px){
 
+    .merg{
+        top: 8px;
+    }
+    #start{
+        top: 0px;
+    }
 
-@media only screen and (max-width:478px){
+    header{
+        padding-top: 5px;
+        height: 28px;
+        background: none;
+    }
+    header .logo h1{
+        font-size: 0.8rem;
+    }
+    #btn-check, #btn-close{
+        font-size: 1.1rem;
+    }
+    nav ul{
+        margin-top: -6px;
+    }
+    nav ul li a, #down-btn a h1, #start ul li a{
+        font-size: 0.7rem;
+    }
+    #start ul{
+        padding: 3px 10px;
+        background: none;
+    }
+    #video1{
+        height: 100%;
+    }
+    #video2{
+        top: -3px;
+    }
 
-    nav ul li a{
-        font-size: 0.6rem;
+}
+
+@media (max-width:450px){
+    
+
+    nav ul li a, #down-btn a h1, #start ul li a, #start ul li{
+        font-size: 0.5rem;
+    }
+
+    ul li{
+        padding-right: 11px !important;
     }
 }
