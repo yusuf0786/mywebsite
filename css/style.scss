@@ -2,6 +2,17 @@
 // $variablename:text; e.g.:-
 $mycolor: red;
 
+
+// how to make a mixin and include it.
+// @mixin name($mycolor){
+//     color: $mycolor;
+//     CSS Properties
+// }
+// how to include
+// element or tag{
+//     @include name(green);
+// }
+
 *{
     margin: 0;
     padding: 0;
@@ -186,8 +197,9 @@ header nav button{
     opacity: 0;
 }
 // below is the use of SASS Operators i.e. +,-,*,/,etc.
+// below is the use of mixin & include
 
-#layout1, #layout2, #layout3{
+@mixin layoutcss($margintop){                           //argument passed
     width: (100% / 3.5);
     height: 200px;
     padding-top: 58px;
@@ -203,24 +215,14 @@ header nav button{
     background-size: cover;
     /* transition: all 1s linear 0s; */
     transition-duration: 1s;
+    margin-top: $margintop;                             //argument happening
+}
+
+#layout1, #layout2, #layout3{
+    @include layoutcss(0);                           //argument value defined
 }
 #layout4, #layout5, #layout6{
-    width: 28%;
-    height: 200px;
-    padding-top: 58px;
-    border: 1px solid  coral;
-    border-radius: 5px;
-    text-align: center;
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    line-height: 38px;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    /* transition: all 1s linear 0s; */
-    transition-duration: 1s;
-    margin-top: 78px;
+    @include layoutcss(78px);                              //argument value defined
 }
 
 #layout1{
@@ -261,6 +263,15 @@ header nav button{
     color: transparent;
     transform: scale(1.4) rotateY(360deg);    /* <- importan */
 }
+
+// what is extend and how to write it 
+// %name{
+//     CSS Properties
+// }
+// in CSS of element, tag, etc.
+// element,tag,etc.{
+//     @extend %name;
+// }
 
 #work{
     border-bottom: 0px solid cornflowerblue;

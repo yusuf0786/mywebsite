@@ -249,10 +249,11 @@ header nav button {
   /* transition: all 1s linear 0s; */
   -webkit-transition-duration: 1s;
           transition-duration: 1s;
+  margin-top: 0;
 }
 
 #layout4, #layout5, #layout6 {
-  width: 28%;
+  width: 28.57143%;
   height: 200px;
   padding-top: 58px;
   border: 1px solid  coral;
