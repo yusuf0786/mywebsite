@@ -5,7 +5,7 @@
 }
 
 
-@media only screen and (max-width: 767px){
+@media only screen and (max-width: 768px){
 
     body{
         background-color: #000;
@@ -32,6 +32,28 @@
         height: 50vh;
     }
 
+    #contact{
+        height: 100vh;
+        form{
+            max-width: 100%;
+            padding: 0 15px;
+
+            input{
+                width: 100%;
+            }
+
+            textarea{
+                width: 100%;
+            }
+
+            input[type="submit"]{
+                width: 49%;
+            }
+            input[type="reset"]{
+                width: 49%;
+            }
+        }
+    }
 
     #start ul li{
         opacity: 0;
