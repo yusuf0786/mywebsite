@@ -24,8 +24,8 @@
             <ul>
                 <li id="home1"><a href="#home">Home</a></li>
                 <li><a href="#">About</a></li>
-                <li><a href="#">Portfolio</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a class="not-active">Portfolio</a></li>
+                <li class="contact1"><a href="#contact">Contact</a></li>
             </ul>
 
             <button id="btn-check"><span class="fa fa-angle-double-left"></span></button>
@@ -43,11 +43,41 @@
 
         <iframe src="frame.html" frameborder="0" id="video1"></iframe>
     
+        <!-- top-page starts -->
         <section class="top-page">
     
             <button id="down-btn"><a href="#start"><h1>click to start</h1><span class="fa fa-angle-double-down"></span></a></button>
     
         </section>
+        <!-- top-page ends -->
+
+        <!-- contact starts -->
+        <section id="contact">
+            <form action="process.php">
+
+                <div class="form-grp">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" placeholder="Name" id="name">
+                </div>
+
+                <div class="form-grp">
+                    <label for="organisation">Organisation</label>
+                    <input type="text" name="organisation" placeholder="organization" id="organisation">
+                </div>
+
+                <div class="form-grp">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" placeholder="Email" id="email">
+                </div>
+
+                <textarea name="message" id="message" cols="50" rows="10" placeholder="Message"></textarea>
+
+                <input type="submit" value="submit">
+                <input type="reset" value="reset">
+
+            </form>
+        </section>
+        <!-- contact ends -->
 
     </div>
 
@@ -58,7 +88,7 @@
         <ul>
             <li class="navbtnwork"><span class="fa fa-angle-double-right"></span></li>
             <li id="home2"><a href="#home">Home</a></li>
-            <li id="work"><a href="#start">Work</a></li>
+            <li id="work"><a href="#start">Mywork</a></li>
         </ul>
 
         <video width="100%" autoplay muted loop id="video2">
