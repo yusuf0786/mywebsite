@@ -1,3 +1,4 @@
+// toggle btn for mobile
 $("#btn-check, #start .navbtnwork").click(function(){
 
     $("nav ul").animate({
@@ -24,8 +25,29 @@ $("#btn-close").click(function(){
     $("#btn-close").hide();
 });
 
-/* work animation */
 
+
+
+// contact animation
+$(".contact1").click(function(){
+
+    $("#contact").toggle();
+
+    $(".contact1").animate({
+
+        borderWidth: "2px",
+    });
+    $("#home1, #home2, #work").animate({
+
+        borderWidth: "0px"
+    });
+});
+
+
+
+
+
+/* work animation */
 $("#work").click(function(){
 
     $(".layouts").animate({
@@ -38,16 +60,17 @@ $("#work").click(function(){
         borderWidth: "2px",
         paddingRight: "2px"
     });
-    $("#home1, #home2").animate({
+    $("#home1, #home2, .contact1").animate({
 
         borderWidth: "0px"
     });
+    $("#contact").hide();
 });
 
 
 $("#home1, #home2").click(function(){
 
-    $("#work").animate({
+    $("#work, .contact1").animate({
 
         borderWidth: "0px"
     });
@@ -57,4 +80,5 @@ $("#home1, #home2").click(function(){
         paddingRight: "2px",
         marginRight: "25px"
     });
+    $("#contact").hide();
 });
