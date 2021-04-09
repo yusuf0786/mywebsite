@@ -61,10 +61,6 @@ li a {
   color: cornflowerblue;
 }
 
-li .not-active {
-  cursor: not-allowed;
-}
-
 header nav button {
   padding: 0 4px;
   font-size: 0.8rem;
