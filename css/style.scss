@@ -60,15 +60,12 @@ header{
         letter-spacing: 1px;
     }
 }
-
 nav{
     display: flex;
 }
-
 ul{
     display: flex;
 }
-
 li{
     list-style: none;
     padding-right: 28px;
@@ -82,9 +79,6 @@ li{
         cursor: not-allowed;
     }
 }
-
-
-
 header nav button{
     padding: 0 4px;
     font-size: 0.8rem;
@@ -93,14 +87,13 @@ header nav button{
     border-radius: 4px;
     display: none;
 }
-
 #btn-check{
     color: cornflowerblue;
 }
-
 #btn-close{
     color: red;
 }
+
 
 .merg{
     width: 100%;
@@ -144,6 +137,17 @@ header nav button{
     }
 }
 
+#contact {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #1f1f1f;
+    display: none;
+}
+
 @mixin contact-btn($color){
     background-color: coral;
     padding: 10px 28px;
@@ -165,76 +169,6 @@ header nav button{
     padding-left: 10px;
     box-shadow: 5px 5px 8px 0px coral;
 }
-
-#contact{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    z-index: 1;
-    background-color: #0f0f0f;
-    color: #fff;
-    padding: 50px 0;
-    display: none;
-    overflow: scroll;
-
-    form{
-        max-width: 1200px;
-        margin: 0 auto;
-        .form-grp{
-            label{
-                display: block;
-            }
-            input{
-                @include input-css(48px);
-
-                &:focus{
-                    border: 3px solid cornflowerblue;
-                    box-shadow: none;
-                }
-            }
-        }
-
-        textarea{
-            @include input-css(auto);
-            display: block;
-            transition-duration: 100ms;
-            padding-top: 8px;
-
-            &:focus{
-                border: 3px solid cornflowerblue;
-                font-size: 0.6rem;
-                width: 58%;
-                box-shadow: none;
-            }
-        }
-
-        input[type="submit"]{
-            @include contact-btn(#fff);
-        }
-        input[type="reset"]{
-            @include contact-btn(#000)
-        }
-
-        a{
-            text-decoration: none;
-            color: #dfdfdf;
-            font-size: 0.8rem;
-            font-weight: 600;
-
-            &:hover{
-                box-shadow: 0px 0px 8px 1px coral;
-                background-color: coral;
-                border-radius: 2px;
-                color: #fff;
-            }
-        }
-    }
-}
-
-
-
-
 
 @keyframes btnstart{
 
