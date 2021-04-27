@@ -134,8 +134,10 @@ header nav button {
 
 .top-page a {
   text-decoration: none;
-  -webkit-animation: btnstart 3s linear 0s infinite forwards;
-          animation: btnstart 3s linear 0s infinite forwards;
+  -webkit-animation: btnstart 6s linear 0s infinite forwards;
+          animation: btnstart 6s linear 0s infinite forwards;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
 }
 
 #contact {
@@ -157,31 +159,31 @@ header nav button {
     color: green;
   }
   20% {
-    color: greenyellow;
+    color: red;
   }
   30% {
-    color: orange;
+    color: blue;
   }
   40% {
-    color: orangered;
+    color: green;
   }
   50% {
     color: red;
   }
   60% {
-    color: coral;
+    color: blue;
   }
   70% {
-    color: tomato;
+    color: green;
   }
   80% {
-    color: cornflowerblue;
+    color: red;
   }
   90% {
-    color: skyblue;
+    color: blue;
   }
   100% {
-    color: blue;
+    color: green;
   }
 }
 
@@ -193,31 +195,31 @@ header nav button {
     color: green;
   }
   20% {
-    color: greenyellow;
+    color: red;
   }
   30% {
-    color: orange;
+    color: blue;
   }
   40% {
-    color: orangered;
+    color: green;
   }
   50% {
     color: red;
   }
   60% {
-    color: coral;
+    color: blue;
   }
   70% {
-    color: tomato;
+    color: green;
   }
   80% {
-    color: cornflowerblue;
+    color: red;
   }
   90% {
-    color: skyblue;
+    color: blue;
   }
   100% {
-    color: blue;
+    color: green;
   }
 }
 
@@ -468,12 +470,35 @@ footer .social a {
   }
 }
 
-@media (max-width: 450px) {
-  nav ul li a, #down-btn a h1, #start ul li a, #start ul li {
-    font-size: 0.5rem;
+@media only screen and (max-width: 425px) {
+  nav ul {
+    width: 100%;
+    border-top: 1px solid cornflowerblue;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    position: fixed;
+    top: 38px;
+    left: 0;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  ul li {
+    padding-right: 15px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  ul {
+    border-bottom: 1px solid cornflowerblue;
+    background-color: #000;
+    -ms-flex-pack: distribute !important;
+        justify-content: space-around !important;
+    padding-bottom: 3px;
   }
   ul li {
-    padding-right: 11px !important;
+    padding-right: 0;
   }
 }
 /*# sourceMappingURL=style.css.map */

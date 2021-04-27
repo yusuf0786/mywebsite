@@ -133,7 +133,8 @@ header nav button{
 
     a{
         text-decoration: none;
-        animation: btnstart 3s linear 0s infinite forwards;
+        animation: btnstart 6s linear 0s infinite forwards;
+        animation-direction: alternate;
     }
 }
 
@@ -173,26 +174,16 @@ header nav button{
 @keyframes btnstart{
 
     0%{color: blue;}
-
     10%{color: green;}
-
-    20%{color: greenyellow;}
-
-    30%{color: orange;}
-
-    40%{color: orangered;}
-
+    20%{color: red;}
+    30%{color: blue;}
+    40%{color: green;}
     50%{color: red;}
-
-    60%{color: coral;}
-
-    70%{color: tomato;}
-
-    80%{color: cornflowerblue;}
-
-    90%{color: skyblue;}
-
-    100%{color: blue;}
+    60%{color: blue;}
+    70%{color: green;}
+    80%{color: red;}
+    90%{color: blue;}
+    100%{color: green;}
 
 }
 
