@@ -477,7 +477,7 @@ footer .social a {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
-    position: fixed;
+    position: absolute;
     top: 38px;
     left: 0;
   }
