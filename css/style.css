@@ -172,6 +172,7 @@ main {
   position: absolute;
   top: 0;
   left: 0;
+  overflow: hidden;
 }
 
 main section {
@@ -420,8 +421,8 @@ main .layouts {
 @-webkit-keyframes main_sec_anim {
   0% {
     opacity: 0;
-    -webkit-transform: translate(100%, 0) scale(0.3);
-    transform: translate(100%, 0) scale(0.3);
+    -webkit-transform: translate(0, -100%) scale(0.3);
+    transform: translate(0, -100%) scale(0.3);
   }
   50% {
     opacity: 1;
@@ -438,8 +439,8 @@ main .layouts {
 @keyframes main_sec_anim {
   0% {
     opacity: 0;
-    -webkit-transform: translate(100%, 0) scale(0.3);
-    transform: translate(100%, 0) scale(0.3);
+    -webkit-transform: translate(0, -100%) scale(0.3);
+    transform: translate(0, -100%) scale(0.3);
   }
   50% {
     opacity: 1;
