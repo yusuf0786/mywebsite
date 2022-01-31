@@ -1,0 +1,133 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 25px;
+}
+
+body {
+    scroll-behavior: smooth;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+@import "../../css/navigation";
+
+.active {
+    border: 1px solid cornflowerblue;
+    border-radius: 8px;
+    box-shadow: 0 0 5px 3px #fff;
+    background-color: cornflowerblue;
+    color: #fff;
+}
+
+@mixin form_grp($color) {
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 400;
+    color: $color;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+@mixin input_boxes($m_top) {
+    display: block;
+    width: 100%;
+    margin-top: $m_top;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+main {
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    padding: 20px 50px 50px 50px;
+    color: #fff;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    display: flex;
+    flex-flow: row wrap;
+    overflow-y: auto;
+
+    section {
+        width: 50%;
+
+        ul {
+            display: none;
+            width: 90%;
+            background-color: #fff;
+            color: red;
+            line-height:43px;
+            margin: 40px auto 0 auto;
+            padding: 20px;
+            border-radius: 10px;
+
+            li {
+                margin: 0 0 0 43px;
+            }
+        }
+
+        p {
+            font-size: 0.8rem;
+            font-weight: 400;
+            color: red;
+            margin: 33px 0 0 30px;
+        }
+    }
+
+    form {
+
+        .form_grp {
+            &:nth-child(1){
+                @include form_grp(red);
+            }
+            &:nth-child(2){
+                @include form_grp(green);
+            }
+            &:nth-child(3){
+                @include form_grp(blue);
+            }
+
+            input {
+                @include input_boxes(10px);
+            }
+        }
+
+        textarea {
+            @include input_boxes(50px);
+        }
+
+        input[type="submit"] {
+            margin-top: 30px;
+            border: 1px solid transparent;
+            border-radius: 8px;
+            padding: 10px 15px;
+            font-size: .8rem;
+            font-weight: 400;
+            cursor: pointer;
+            transition-duration: 0.5s;
+
+            &:hover {
+                background-color: red;
+                color: #fff;
+            }
+        }
+
+    }
+}
+
+@media only screen and (max-width:1000px) {
+    main {
+        section {
+            width: 100%;
+
+            ul {
+                margin: 38px 0 0 0;
+            }
+        }
+    }
+}
