@@ -241,8 +241,11 @@ main form input[type="submit"]:hover {
 }
 
 @media only screen and (max-width: 1000px) {
-  html {
-    font-size: 18px;
+  main form .form_grp {
+    font-size: 0.8rem !important;
+  }
+  main form input[type="submit"] {
+    font-size: .7rem;
   }
   main section {
     width: 100%;
@@ -258,6 +261,7 @@ main form input[type="submit"]:hover {
   }
   main section p {
     margin: 33px 0 20px 0;
+    font-size: 0.58rem;
   }
 }
 
@@ -266,11 +270,14 @@ main form input[type="submit"]:hover {
     padding: 80px 30px 0 30px;
   }
   main section ul {
-    font-size: 0.75rem;
+    font-size: 0.58rem;
     line-height: 25px;
   }
   main section ul li {
     margin: 0 0 0 23px;
+  }
+  main section p {
+    font-size: 0.50rem;
   }
 }
 /*# sourceMappingURL=style.css.map */
