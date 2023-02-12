@@ -14,6 +14,11 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- fonts link here -->
     <!-- jQuery link here -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <!-- GSAP links here -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js" defer></script>
+        <script src="js/script.js" defer></script>
     <!-- CSS link here -->
         <link rel="stylesheet" href="css/style.css">
 </head>
@@ -37,11 +42,25 @@
     </header>
 
     <section class="sec1">
-        <iframe src="iframe.html"></iframe>
+
+        <iframe src="iframe.html" frameborder="0"></iframe>
+        
+        <div class="slider-img-container">
+            <div class="slider-img">
+                <a href="#" style="--i:1;"><img src="img/layla_furniture.png" alt=""></a>
+                <a href="#" style="--i:2;"><img src="img/Zaza.png" alt=""></a>
+                <a href="#" style="--i:3;"><img src="img/Alchemy.png" alt=""></a>
+                <a href="#" style="--i:4;"><img src="img/Cascade.png" alt=""></a>
+                <a href="#" style="--i:5;"><img src="img/megacorp.png" alt=""></a>
+                <a href="#" style="--i:6;"><img src="img/prism.png" alt=""></a>
+                <a href="#" style="--i:7;"><img src="img/theory.png" alt=""></a>
+                <a href="#" style="--i:8;"><img src="img/Alchemy.png" alt=""></a>
+            </div>
+        </div>
 
         <section class="sec1_inside">
             <div class="sec1_click text_color_anima" id="click_to_main">
-                <h3><span class="fa fa-angle-double-down"></span> Click <span class="fa fa-angle-double-down"></span></h3>
+                <h3><span class="fa fa-angle-double-down"></span> Click or Scroll <span class="fa fa-angle-double-down"></span></h3>
                 <h3>See my work </h3>
             </div>
         </section>
@@ -132,8 +151,6 @@
         </div>
 
     </main>
-
-    <script src="js/script.js"></script>
 
 </body>
 </html>

@@ -9,9 +9,9 @@ html {
 }
 
 body {
-    scroll-behavior: smooth;
+    // scroll-behavior: smooth;
     font-family: Arial, Helvetica, sans-serif;
-    overflow: hidden;
+    background-color: #000
 }
 
 @import "navigation";
@@ -19,8 +19,12 @@ body {
 .sec1 {
     width: 100%;
     height: 100vh;
+    background-color: #000;
 }
 .sec1 iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100vh;
     border: 0;
@@ -122,6 +126,48 @@ main .layouts {
 }
 .layouts figcaption h1 {
     margin-bottom: 5px;
+}
+
+
+// slider image CSS
+.slider-img-container {
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+}
+.slider-img {
+    position: relative;
+    top: 38vh;
+    max-width: 350px;
+    width: 18.23%;
+    height: 250px;
+    transform-style: preserve-3d;
+    animation: moving 30s linear infinite;
+    transform: perspective(1000px);
+    margin: 0 auto;
+}
+.slider-img a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform: rotateY(calc(var(--i)*45deg)) translateZ(500px);
+}
+.slider-img a img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: 2s;
+}
+.slider-img a:hover img {
+    transform: translateY(-15px) scale(1.2);
 }
 
 
@@ -264,6 +310,17 @@ main .layouts {
 
 
 /* media queries starts here */
+@media only screen and (max-width:1024px) {
+
+    .slider-img {
+        width: 25%;
+    }
+    .slider-img a {
+        transform: rotateY(calc(var(--i) * 45deg)) translateZ(350px);
+    }
+
+}
+
 @media only screen and (max-width:769px) {
 
     main section {
@@ -273,10 +330,43 @@ main .layouts {
         width: 90%;
     }
 
+    .slider-img {
+        width: 30%;
+    }
+    .slider-img a {
+        transform: rotateY(calc(var(--i) * 45deg)) translateZ(290px);
+    }
+
 }
 
-@media only screen and (max-width:426px) {
+@media only screen and (max-width:576px) {
+    .slider-img {
+        height: 150px;
+    }
+    .slider-img a {
+        transform: rotateY(calc(var(--i) * 45deg)) translateZ(250px);
+    }
+}
+
+@media only screen and (max-width:480px) {
     html {
         font-size: 20px;
+    }
+
+    .slider-img-container {
+        overflow-x: clip;
+    }
+    .slider-img {
+        width: 195px;
+    }
+    .slider-img a {
+        transform: rotateY(calc(var(--i) * 45deg)) translateZ(250px);
+    }
+}
+
+@media only screen and (max-width:350px) {
+    .slider-img {
+        width: 180px;
+        height: 125px;
     }
 }

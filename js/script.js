@@ -66,3 +66,31 @@ function nav_close(){
 
     nav_toggled = false
 }
+
+
+
+// GSAP
+let sliderImgImages = document.querySelectorAll(".slider-img a")
+
+let lt = gsap.timeline({
+  defaults:{duration:1},
+  scrollTrigger: {
+    trigger: "body",
+    toggleActions: "restart pause reverse pause",
+    start: "1% top",
+    end: "+=5000",
+    scrub: 1,
+    pin: ".slider-img",
+    onEnter: () => {
+        gsap.to(".slider-img-container", {opacity:1})
+        gsap.to(".sec1_inside", {opacity:0})
+        gsap.to(".sec1 > iframe", {opacity:0})
+    },
+    onLeaveBack: () => {
+        gsap.to(".slider-img-container", {opacity:0})
+        gsap.to(".sec1_inside", {opacity:1})
+        gsap.to(".sec1 > iframe", {opacity:1})
+    },
+  }
+})
+lt.fromTo(".slider-img", {rotateY: "0deg"}, {rotateY: "360deg"})

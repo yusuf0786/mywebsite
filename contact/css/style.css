@@ -1,6 +1,5 @@
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
@@ -28,19 +27,10 @@ nav {
   width: 100%;
   height: 80px;
   padding: 0 18px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
 }
 
 nav a {
@@ -54,13 +44,8 @@ nav a {
 }
 
 nav ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
+  flex-flow: row wrap;
 }
 
 nav ul li {
@@ -70,22 +55,19 @@ nav ul li {
   border: 1px solid #0f0f0f;
   border-radius: 8px;
   color: cornflowerblue;
-  -webkit-transition-duration: 0.3s;
-          transition-duration: 0.3s;
+  transition-duration: 0.3s;
 }
 
 nav ul li:hover {
   border: 1px solid cornflowerblue;
-  -webkit-box-shadow: 0 0 2px 3px cornflowerblue;
-          box-shadow: 0 0 2px 3px cornflowerblue;
+  box-shadow: 0 0 2px 3px cornflowerblue;
 }
 
 nav .btn_toggle {
   display: none;
   color: cornflowerblue;
   cursor: pointer;
-  -webkit-transition-duration: 0.5s;
-          transition-duration: 0.5s;
+  transition-duration: 0.5s;
 }
 
 /* media query starts here */
@@ -103,7 +85,6 @@ nav .btn_toggle {
     display: block;
   }
 }
-
 @media only screen and (max-width: 426px) {
   header {
     height: 58px;
@@ -114,10 +95,7 @@ nav .btn_toggle {
   nav ul {
     top: 58px;
     height: 100vh;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: column nowrap;
-            flex-flow: column nowrap;
+    flex-flow: column nowrap;
   }
   nav ul li {
     margin: 0;
@@ -125,12 +103,10 @@ nav .btn_toggle {
     padding: 5px 10px;
   }
 }
-
 .active {
   border: 1px solid cornflowerblue;
   border-radius: 8px;
-  -webkit-box-shadow: 0 0 5px 3px #fff;
-          box-shadow: 0 0 5px 3px #fff;
+  box-shadow: 0 0 5px 3px #fff;
   background-color: cornflowerblue;
   color: #fff;
 }
@@ -144,20 +120,13 @@ main {
   position: absolute;
   top: 0;
   left: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
+  flex-flow: row wrap;
   overflow-y: auto;
 }
-
 main section {
   width: 50%;
 }
-
 main section ul {
   display: none;
   width: 90%;
@@ -168,18 +137,15 @@ main section ul {
   padding: 20px;
   border-radius: 10px;
 }
-
 main section ul li {
   margin: 0 0 0 43px;
 }
-
 main section p {
   font-size: 0.8rem;
   font-weight: 400;
   color: red;
   margin: 33px 0 0 30px;
 }
-
 main form .form_grp:nth-child(1) {
   width: 100%;
   font-size: 1rem;
@@ -188,7 +154,6 @@ main form .form_grp:nth-child(1) {
   letter-spacing: 1px;
   margin-bottom: 20px;
 }
-
 main form .form_grp:nth-child(2) {
   width: 100%;
   font-size: 1rem;
@@ -197,7 +162,6 @@ main form .form_grp:nth-child(2) {
   letter-spacing: 1px;
   margin-bottom: 20px;
 }
-
 main form .form_grp:nth-child(3) {
   width: 100%;
   font-size: 1rem;
@@ -206,7 +170,6 @@ main form .form_grp:nth-child(3) {
   letter-spacing: 1px;
   margin-bottom: 20px;
 }
-
 main form .form_grp input {
   display: block;
   width: 100%;
@@ -214,7 +177,6 @@ main form .form_grp input {
   padding: 10px;
   border-radius: 10px;
 }
-
 main form textarea {
   display: block;
   width: 100%;
@@ -222,20 +184,17 @@ main form textarea {
   padding: 10px;
   border-radius: 10px;
 }
-
-main form input[type="submit"] {
+main form input[type=submit] {
   margin-top: 30px;
   border: 1px solid transparent;
   border-radius: 8px;
   padding: 10px 15px;
-  font-size: .8rem;
+  font-size: 0.8rem;
   font-weight: 400;
   cursor: pointer;
-  -webkit-transition-duration: 0.5s;
-          transition-duration: 0.5s;
+  transition-duration: 0.5s;
 }
-
-main form input[type="submit"]:hover {
+main form input[type=submit]:hover {
   background-color: red;
   color: #fff;
 }
@@ -244,8 +203,8 @@ main form input[type="submit"]:hover {
   main form .form_grp {
     font-size: 0.8rem !important;
   }
-  main form input[type="submit"] {
-    font-size: .7rem;
+  main form input[type=submit] {
+    font-size: 0.7rem;
   }
   main section {
     width: 100%;
@@ -264,7 +223,6 @@ main form input[type="submit"]:hover {
     font-size: 0.58rem;
   }
 }
-
 @media only screen and (max-width: 376px) {
   main {
     padding: 80px 30px 0 30px;
@@ -277,7 +235,6 @@ main form input[type="submit"]:hover {
     margin: 0 0 0 23px;
   }
   main section p {
-    font-size: 0.50rem;
+    font-size: 0.5rem;
   }
-}
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
