@@ -14,6 +14,8 @@ click_to_main.addEventListener('click', function(){
     sec_main.style.display = "block"
     sec_main.classList.add("main_sec_anim")
 
+    modalOpenNecessoryEffect()
+
     mainsection_mause(layout_anchors, layout_imgs)
 })
 
@@ -22,6 +24,8 @@ back_btn.addEventListener('click', function(){
     sec_main.classList.add("main_sec_anim2")
     setTimeout(function(){
         sec_main.style.display = "none"
+
+        modalCloseNecessoryEffect()
     }, 500)
 })
 
@@ -67,6 +71,19 @@ function nav_close(){
     nav_toggled = false
 }
 
+
+function modalOpenNecessoryEffect() {
+    const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+    document.body.style.overflow = "hidden"
+    document.body.style.paddingRight = scrollbarWidth + "px"
+    document.querySelector("header").style.paddingRight = scrollbarWidth + "px"
+}
+
+function modalCloseNecessoryEffect() {
+    document.body.style.overflow = ""
+    document.body.style.paddingRight = ""
+    document.querySelector("header").style.paddingRight = ""
+}
 
 
 // GSAP

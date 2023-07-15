@@ -11,7 +11,7 @@ html {
 body {
     // scroll-behavior: smooth;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #000
+    background-color: #000;
 }
 
 @import "navigation";
@@ -20,6 +20,8 @@ body {
     width: 100%;
     height: 100vh;
     background-color: #000;
+    position: relative;
+    top: 0;
 }
 .sec1 iframe {
     position: absolute;
@@ -110,22 +112,32 @@ main .layouts {
     width: 48%;
     margin-bottom: 35px;
 }
-.layouts a {
-    text-decoration: none;
-    color: inherit;
-}
-.layouts img {
-    width: 100%;
-    margin-bottom: 5px;
-}
-.layouts figcaption {
-    padding: 0 10px;
-    color: coral;
-    font-size: 0.55rem;
-    text-align: left;
-}
-.layouts figcaption h1 {
-    margin-bottom: 5px;
+.layouts {
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    img {
+        width: 100%;
+        margin-bottom: 5px;
+        transition: 1s;
+    }
+
+    figcaption {
+        padding: 0 10px;
+        color: coral;
+        font-size: 0.55rem;
+        text-align: left;
+    }
+
+    figcaption {
+        h1,
+        p { margin-bottom: 5px; }
+        p {
+            &:last-child { margin-bottom: 0; }
+        }
+    }
 }
 
 
@@ -174,7 +186,7 @@ main .layouts {
 
 .active {
     border: 1px solid cornflowerblue;
-    border-radius: 8px;
+    border-radius: 12px;
     box-shadow: 0 0 5px 3px #fff;
     background-color: cornflowerblue;
     color: #fff;
@@ -185,8 +197,8 @@ main .layouts {
 /* animations starts here */
 .text_color_anima {
     /*         name, duration, timing function, delay, iteration count, fill mode */
-    -webkit-animation: text_color 2s linear 0s infinite both;
-    animation: text_color 2s linear 0s infinite both;
+    -webkit-animation: text_color 3s linear 0s infinite both;
+    animation: text_color 3s linear 0s infinite both;
 }
 @keyframes text_color {
     0% { color: cornflowerblue; }
@@ -203,31 +215,8 @@ main .layouts {
 }
 
 .layout_img_anim {
-    border-radius: 4px;
-    -webkit-animation: layout_img 1s linear 0s infinite both;
-    animation: layout_img 1s linear 0s infinite both;
-}
-@keyframes layout_img {
-    0% {
-        -webkit-transform: translate(-8px, 0px);
-        transform: translate(-8px, 0px);
-    }
-    25% {
-        -webkit-transform: translate(0px, -8px);
-        transform: translate(0px, -8px);
-    }
-    50% {
-        -webkit-transform: translate(8px, 0px);
-        transform: translate(8px, 0px);
-    }
-    75% {
-        -webkit-transform: translate(0px, 8px);
-        transform: translate(0px, 8px);
-    }
-    100% {
-        -webkit-transform: translate(-8px, 0px);
-        transform: translate(-8px, 0px);
-    }
+    border-radius: 8px;
+    transform: scale(1.01);
 }
 
 .main_sec_anim {
