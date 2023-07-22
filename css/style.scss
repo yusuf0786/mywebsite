@@ -76,7 +76,7 @@ main section .back_btn {
     font-weight: bold;
     color: cornflowerblue;
     position: absolute;
-    top: 95px;
+    top: 90px;
     left: 19px;
     cursor: pointer;
     display: flex;
@@ -226,10 +226,10 @@ main .layouts {
 @keyframes main_sec_anim {
     0% {
         opacity: 0;
-        -webkit-transform: translate(0, -10%) scale(0.9);
-        transform: translate(0, -10%) scale(0.9);
+        -webkit-transform: translate(0, -5%) scale(0.9);
+        transform: translate(0, -5%) scale(0.9);
     }
-    35% {
+    75% {
         opacity: 1;
         -webkit-transform: translate(0, 0) scale(0.9);
         transform: translate(0, 0) scale(0.9);
@@ -346,16 +346,26 @@ main .layouts {
         overflow-x: clip;
     }
     .slider-img {
-        width: 195px;
+        width: 128px;
+        height: 125px;
     }
     .slider-img a {
-        transform: rotateY(calc(var(--i) * 45deg)) translateZ(250px);
+        transform: rotateY(calc(var(--i) * 45deg)) translateZ(165px);
+    }
+}
+
+@media only screen and (max-width:426px) {
+    main section .back_btn {
+        top: 80px;
     }
 }
 
 @media only screen and (max-width:350px) {
     .slider-img {
-        width: 180px;
-        height: 125px;
+        width: 108px;
+        height: 100px;
+    }
+    .slider-img a {
+        transform: rotateY(calc(var(--i) * 45deg)) translateZ(145px);
     }
 }
