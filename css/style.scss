@@ -226,13 +226,13 @@ main .layouts {
 @keyframes main_sec_anim {
     0% {
         opacity: 0;
-        -webkit-transform: translate(0, -100%) scale(0.3);
-        transform: translate(0, -100%) scale(0.3);
+        -webkit-transform: translate(0, -10%) scale(0.9);
+        transform: translate(0, -10%) scale(0.9);
     }
-    50% {
+    35% {
         opacity: 1;
-        -webkit-transform: translate(0, 0) scale(0.3);
-        transform: translate(0, 0) scale(0.3);
+        -webkit-transform: translate(0, 0) scale(0.9);
+        transform: translate(0, 0) scale(0.9);
     }
     100% {
         opacity: 1;
@@ -251,15 +251,15 @@ main .layouts {
         -webkit-transform: translate(0, 0) scale(1);
         transform: translate(0, 0) scale(1);
     }
-    50% {
+    35% {
         opacity: 1;
-        -webkit-transform: translate(0, 0) scale(0.3);
-        transform: translate(0, 0) scale(0.3);
+        -webkit-transform: translate(0, 0) scale(0.9);
+        transform: translate(0, 0) scale(0.9);
     }
     100% {
         opacity: 0;
-        -webkit-transform: translate(-100%, 0) scale(0.3);
-        transform: translate(-100%, 0) scale(0.3);
+        -webkit-transform: translate(-10%, 0) scale(0.9);
+        transform: translate(-10%, 0) scale(0.9);
     }
 }
 
