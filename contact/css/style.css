@@ -11,6 +11,8 @@ html {
 body {
   scroll-behavior: smooth;
   font-family: Arial, Helvetica, sans-serif;
+  background-color: #000;
+  color: #fff;
 }
 
 header {
@@ -111,23 +113,15 @@ nav .btn_toggle {
   color: #fff;
 }
 
-main {
-  width: 100%;
-  height: 100vh;
-  background-color: #000;
+main .wrapper {
   padding: 100px 50px 0 50px;
-  color: #fff;
-  position: absolute;
-  top: 0;
-  left: 0;
   display: flex;
   flex-flow: row wrap;
-  overflow-y: auto;
 }
-main section {
+main .common-section {
   width: 50%;
 }
-main section ul {
+main .common-section ul {
   display: none;
   width: 90%;
   background-color: #fff;
@@ -137,10 +131,10 @@ main section ul {
   padding: 20px;
   border-radius: 10px;
 }
-main section ul li {
+main .common-section ul li {
   margin: 0 0 0 43px;
 }
-main section p {
+main .common-section p {
   font-size: 0.8rem;
   font-weight: 400;
   color: red;
@@ -193,32 +187,155 @@ main form input[type=submit] {
   font-weight: 400;
   cursor: pointer;
   transition-duration: 0.5s;
+  background-color: #f0f0f0;
+  color: #0f0f0f;
 }
 main form input[type=submit]:hover {
   background-color: red;
   color: #fff;
 }
 
+.footer {
+  background: linear-gradient(180deg, rgba(255, 255, 225, 0) 0%, rgb(53, 134, 255) 80%);
+}
+.footer .footer-inner-wrapper {
+  margin-top: 75px;
+  position: relative;
+  top: 0;
+  width: 100%;
+  height: inherit;
+  background: #3586ff;
+}
+.footer .footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.footer .social-icon,
+.footer .menu {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+.footer .social-icon__item,
+.footer .menu__item {
+  list-style: none;
+}
+.footer .social-icon__link {
+  font-size: 1rem;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+}
+.footer .social-icon__link:hover {
+  transform: translateY(-10px);
+}
+.footer p {
+  color: #fff;
+  margin: 15px 0 10px 0;
+  font-size: 0.65rem;
+  font-weight: 300;
+}
+.footer p a {
+  color: #fff;
+  font-weight: bold;
+}
+.footer p a:hover {
+  text-decoration: none;
+}
+.footer .wave {
+  position: absolute;
+  top: -75px;
+  left: 0;
+  width: 100%;
+  height: 75px;
+  background: url("../img/wave.png");
+  background-size: 1000px 100px;
+}
+.footer .wave#wave1 {
+  z-index: 1000;
+  opacity: 1;
+  bottom: 0;
+  animation: animateWaves 4s linear infinite;
+}
+.footer .wave#wave2 {
+  z-index: 999;
+  opacity: 0.5;
+  bottom: 10px;
+  animation: animate 4s linear infinite !important;
+}
+.footer .wave#wave3 {
+  z-index: 1000;
+  opacity: 0.2;
+  bottom: 15px;
+  animation: animateWaves 3s linear infinite;
+}
+.footer .wave#wave4 {
+  z-index: 999;
+  opacity: 0.7;
+  bottom: 20px;
+  animation: animate 3s linear infinite;
+}
+
+@keyframes animateWaves {
+  0% {
+    background-position-x: 1000px;
+  }
+  100% {
+    background-position-x: 0px;
+  }
+}
+@keyframes animate {
+  0% {
+    background-position-x: -1000px;
+  }
+  100% {
+    background-position-x: 0px;
+  }
+}
+html, body {
+  height: 100%;
+}
+
+.footerBottomWhiteSpaceSolved {
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+
+main, footer {
+  display: table-row;
+}
+
 @media only screen and (max-width: 769px) {
+  main .wrapper {
+    padding: 75px 18px 0 18px;
+  }
   main form .form_grp {
     font-size: 0.8rem !important;
   }
   main form input[type=submit] {
+    width: 100%;
     font-size: 0.7rem;
   }
-  main section {
+  main .common-section {
     width: 100%;
   }
-  main section ul {
+  main .common-section ul {
     width: 100%;
     margin: 38px 0 0 0;
     padding: 10px;
     line-height: 33px;
   }
-  main section ul li {
+  main .common-section ul li {
     margin: 0 0 0 33px;
   }
-  main section p {
+  main .common-section p {
     margin: 33px 0 20px 0;
     font-size: 0.58rem;
   }
@@ -227,14 +344,14 @@ main form input[type=submit]:hover {
   main {
     padding: 80px 30px 0 30px;
   }
-  main section ul {
+  main .common-section ul {
     font-size: 0.58rem;
     line-height: 25px;
   }
-  main section ul li {
+  main .common-section ul li {
     margin: 0 0 0 23px;
   }
-  main section p {
+  main .common-section p {
     font-size: 0.5rem;
   }
 }/*# sourceMappingURL=style.css.map */

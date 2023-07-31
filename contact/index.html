@@ -19,59 +19,83 @@
 </head>
 <body>
 
-    <header>
-        <nav id="mynav">
-            <span class="brand_name"><a href="#">Yusuf</a></span>
-
-            <ul>
-                <li id="home"><a href="../index.html">Home</a></li>
-                <li><a href="https://www.linkedin.com/in/yusuf-ansari-281118157/">About</a></li>
-                <li><a href="https://yusuf0786.github.io/portfolio/">Portfolio</a></li>
-                <li class="active"><a href="index.html">Contact</a></li>
-            </ul>
-
-            <div class="btn_toggle">
-                <span class="fa fa-navicon"></span>
+    <div class="footerBottomWhiteSpaceSolved">
+        <header>
+            <nav id="mynav">
+                <span class="brand_name"><a href="#">Yusuf</a></span>
+    
+                <ul>
+                    <li id="home"><a href="../index.html">Home</a></li>
+                    <li><a href="https://www.linkedin.com/in/yusuf-ansari-281118157/">About</a></li>
+                    <li><a href="https://yusuf0786.github.io/portfolio/">Portfolio</a></li>
+                    <li class="active"><a href="index.html">Contact</a></li>
+                </ul>
+    
+                <div class="btn_toggle">
+                    <span class="fa fa-navicon"></span>
+                </div>
+            </nav>
+        </header>
+    
+        <main>
+    
+            <section class="wrapper">
+                <section class="common-section contact-section">
+    
+                    <form action="index.html" target="_blank" method="post" id="myform">
+        
+                        <div class="form_grp">
+                            <label for="company_name">Company name :</label>
+                            <input type="text" name="company_name" autocomplete="on" id="company_name">
+                        </div>
+        
+                        <div class="form_grp">
+                            <label for="your_name">Your name :</label>
+                            <input type="text" name="your_name" autocomplete="on" id="your_name">
+                        </div>
+        
+                        <div class="form_grp">
+                            <label for="mydatetime">Schedule interview :</label>
+                            <input type="dateTime-local" value="" id="mydatetime">
+                        </div>
+        
+                        <textarea name="message" autocomplete="off" id="message_box" cols="30" rows="10" form="myform" placeholder="Message"></textarea>
+        
+                        <input type="submit">
+                        
+                    </form>
+        
+                </section>
+        
+                <section class="common-section note-section">
+                    <ul id="error_ul"></ul>
+        
+                    <p>Note : This contact page is for the demonstration purpose only if you fill this form and submit it will not gonna send the data anywhere, but soon I will add a google form link if you want to fill the form and send to me.</p>
+                </section>
+            </section>
+    
+        </main>
+    
+        <footer class="footer">
+            <div class="footer-inner-wrapper">
+                <div class="waves">
+                    <div class="wave" id="wave1"></div>
+                    <div class="wave" id="wave2"></div>
+                    <div class="wave" id="wave3"></div>
+                    <div class="wave" id="wave4"></div>
+                </div>
+                <div class="footer-content">
+                    <ul class="social-icon">
+                        <li class="social-icon__item"><a class="social-icon__link" href="tel:+917666330242" target="_blank" title="Call"><span class="fa fa-phone"><span></a></li>
+                        <li class="social-icon__item"><a class="social-icon__link" href="https://github.com/yusuf0786" target="_blank" title="Github"><span class="fa fa-github"><span></a></li>
+                        <li class="social-icon__item"><a class="social-icon__link" href="https://www.linkedin.com/in/yusuf-ansari-281118157/" target="_blank" title="Linkedin"><span class="fa fa-linkedin-square"><span></a></li>
+                        <li class="social-icon__item"><a class="social-icon__link" href="mailto:yusssuf0786@gmail.com" target="_blank" title="Email"><span class="fa fa-envelope"><span></a></li>
+                    </ul>
+                    <p>Developed by <a href="https://www.linkedin.com/in/yusuf-ansari-281118157/">Yusuf Ansari</a></p>
+                </div>
             </div>
-        </nav>
-    </header>
-
-    <main>
-
-        <section>
-
-            <form action="index.html" target="_blank" method="post" id="myform">
-
-                <div class="form_grp">
-                    <label for="company_name">Company name :</label>
-                    <input type="text" name="company_name" autocomplete="on" id="company_name">
-                </div>
-
-                <div class="form_grp">
-                    <label for="your_name">Your name :</label>
-                    <input type="text" name="your_name" autocomplete="on" id="your_name">
-                </div>
-
-                <div class="form_grp">
-                    <label for="mydatetime">Schedule interview :</label>
-                    <input type="dateTime-local" value="" id="mydatetime">
-                </div>
-
-                <textarea name="message" autocomplete="off" id="message_box" cols="30" rows="10" form="myform" placeholder="Message"></textarea>
-
-                <input type="submit">
-                
-            </form>
-
-        </section>
-
-        <section>
-            <ul id="error_ul"></ul>
-
-            <p>Note : This contact page is for the demonstration purpose only if you fill this form and submit it will not gonna send the data anywhere, but soon I will add a google form link if you want to fill the form and send to me.</p>
-        </section>
-
-    </main>
+        </footer>
+    </div>
 
     <script src="js/script.js"></script>
 
