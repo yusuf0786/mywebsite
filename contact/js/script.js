@@ -30,6 +30,8 @@ function nav_open(){
     mynav.classList.remove("nav_close")
     mynav.classList.add("nav_open")
 
+    modalOpenNecessoryEffect()
+
     nav_toggled = true
 }
 function nav_close(){
@@ -41,7 +43,22 @@ function nav_close(){
         mynav.style.display = "none"
     }, 500)
 
+    modalCloseNecessoryEffect()
+
     nav_toggled = false
+}
+
+function modalOpenNecessoryEffect() {
+    const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth
+    document.body.style.overflow = "hidden"
+    document.body.style.paddingRight = scrollbarWidth + "px"
+    document.querySelector("header").style.paddingRight = scrollbarWidth + "px"
+}
+
+function modalCloseNecessoryEffect() {
+    document.body.style.overflow = ""
+    document.body.style.paddingRight = ""
+    document.querySelector("header").style.paddingRight = ""
 }
 
 

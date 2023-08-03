@@ -190,7 +190,7 @@ main {
     }
     
     .wave#wave1 {
-        z-index: 1000;
+        z-index: 99;
         opacity: 1;
         bottom: 0;
         animation: animateWaves 4s linear infinite;
