@@ -1,0 +1,303 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 25px;
+}
+
+body {
+    scroll-behavior: smooth;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #000;
+    color: #fff;
+}
+
+@import "../../css/navigation";
+
+.active {
+    border: 1px solid cornflowerblue;
+    border-radius: 8px;
+    box-shadow: 0 0 5px 3px #fff;
+    background-color: cornflowerblue;
+    color: #fff;
+}
+
+@mixin form_grp($color) {
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 400;
+    color: $color;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+@mixin input_boxes($m_top) {
+    display: block;
+    width: 100%;
+    margin-top: $m_top;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+main {
+    .wrapper {
+        padding: 100px 50px 0 50px;
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    .common-section {
+        width: 50%;
+
+        ul {
+            display: none;
+            width: 90%;
+            background-color: #fff;
+            color: red;
+            line-height:43px;
+            margin: 40px auto 0 auto;
+            padding: 20px;
+            border-radius: 10px;
+
+            li {
+                margin: 0 0 0 43px;
+            }
+        }
+
+        p {
+            font-size: 0.8rem;
+            font-weight: 400;
+            color: red;
+            margin: 33px 0 0 30px;
+        }
+    }
+
+    form {
+
+        .form_grp {
+            &:nth-child(1){
+                @include form_grp(red);
+            }
+            &:nth-child(2){
+                @include form_grp(green);
+            }
+            &:nth-child(3){
+                @include form_grp(blue);
+            }
+
+            input {
+                @include input_boxes(10px);
+            }
+        }
+
+        textarea {
+            @include input_boxes(50px);
+        }
+
+        input[type="submit"] {
+            margin-top: 30px;
+            border: 1px solid transparent;
+            border-radius: 8px;
+            padding: 10px 15px;
+            font-size: .8rem;
+            font-weight: 400;
+            cursor: pointer;
+            transition-duration: 0.5s;
+            background-color: #f0f0f0;
+            color: #0f0f0f;
+
+            &:hover {
+                background-color: red;
+                color: #fff;
+            }
+        }
+
+    }
+}
+  
+.footer {
+    $wave-value: 75px;
+
+    background: linear-gradient(180deg, rgba(255,255,225,0) 0%, rgba(53,134,255,1) 80%);
+
+    .footer-inner-wrapper {
+        margin-top: $wave-value;
+        position: relative;
+        top: 0;
+        width: 100%;
+        height: inherit;
+        background: #3586ff;
+        // min-height: $wave-value;
+    }
+
+    .footer-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .social-icon,
+    .menu {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px 0;
+        flex-wrap: wrap;
+    }
+    
+    .social-icon__item,
+    .menu__item {
+        list-style: none;
+    }
+    
+    .social-icon__link {
+        font-size: 1rem;
+        color: #fff;
+        margin: 0 10px;
+        display: inline-block;
+        transition: 0.5s;
+    }
+    .social-icon__link:hover {
+        transform: translateY(-10px);
+    }
+    
+    p {
+        color: #fff;
+        margin: 15px 0 10px 0;
+        font-size: 0.65rem;
+        font-weight: 300;
+
+        a {
+            color: #fff;
+            font-weight: bold;
+            &:hover { text-decoration: none; }
+        }
+    }
+    
+    .wave {
+        position: absolute;
+        top: -$wave-value;
+        left: 0;
+        width: 100%;
+        height: $wave-value;
+        background: url("../img/wave.png");
+        background-size: 1000px 100px;
+    }
+    
+    .wave#wave1 {
+        z-index: 99;
+        opacity: 1;
+        bottom: 0;
+        animation: animateWaves 4s linear infinite;
+    }
+    
+    .wave#wave2 {
+        z-index: 999;
+        opacity: 0.5;
+        bottom: 10px;
+        animation: animate 4s linear infinite !important;
+    }
+    
+    .wave#wave3 {
+        z-index: 1000;
+        opacity: 0.2;
+        bottom: 15px;
+        animation: animateWaves 3s linear infinite;
+    }
+    
+    .wave#wave4 {
+        z-index: 999;
+        opacity: 0.7;
+        bottom: 20px;
+        animation: animate 3s linear infinite;
+    }
+
+}
+  
+  @keyframes animateWaves {
+    0%   { background-position-x: 1000px; }
+    100% { background-position-x: 0px; }
+  }
+  
+  @keyframes animate {
+    0%   { background-position-x: -1000px; }
+    100% { background-position-x: 0px; }
+  }
+  
+
+// Footer bottom white space issue solved CSS
+html,body {height:100%;}
+.footerBottomWhiteSpaceSolved {
+    display:table;
+    width:100%;
+    height:100%;
+}
+// header,
+main,footer {display:table-row;}
+// header, footer { height: 1px; }
+
+
+@media only screen and (max-width:769px) {
+
+    main {
+
+        .wrapper {
+            padding: 75px 18px 0 18px;
+        }
+
+        form {
+
+            .form_grp { font-size: 0.8rem !important; }
+
+            input[type="submit"] {
+                width: 100%;
+                font-size: .7rem;
+            }
+
+        }
+
+        .common-section {
+            width: 100%;
+
+            ul {
+                width: 100%;
+                margin: 38px 0 0 0;
+                padding: 10px;
+                line-height: 33px;
+
+                li { margin: 0 0 0 33px; }
+
+            }
+
+            p {
+                margin: 33px 0 20px 0;
+                font-size: 0.58rem;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:376px) {
+    main {
+        padding: 80px 30px 0 30px;
+
+        .common-section {
+
+            ul {
+                font-size: 0.58rem;
+                line-height: 25px;
+
+                li { margin: 0 0 0 23px; }
+
+            }
+
+            p { font-size: 0.50rem; }
+
+        }
+    }
+}

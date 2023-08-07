@@ -51,6 +51,117 @@
         <script src="js/script.js" defer></script>
     <!-- CSS link here -->
         <link rel="stylesheet" href="css/style.css">
+
+        <style>
+            /* main section starts here */
+            .main-content {
+            width: 100%;
+            min-height: 100%;
+            position: absolute;
+            z-index: -1;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                -ms-flex-flow: row wrap;
+                    flex-flow: row wrap;
+            overflow: hidden;
+            }
+
+            .main-content .left-side, .main-content .right-side {
+            width: 50%;
+            color: coral;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+            }
+
+            .main-content .right-side {
+            text-align: right;
+            -webkit-box-align: end;
+                -ms-flex-align: end;
+                    align-items: flex-end;
+            }
+
+            .main-content .left-side .text {
+            line-height: 158px;
+            font-size: 7rem;
+            font-weight: 600;
+            }
+
+            .main-content .left-side .white {
+            color: #fff;
+            }
+
+            .main-content .left-side .text h1 {
+            font-size: 7rem;
+            font-weight: 600;
+            }
+
+            .main-content .right-side .img img {
+            width: 90%;
+            }
+
+            /* main content section ends here */
+            /* media query starts here */
+            @media only screen and (max-width: 1280px) {
+                .main-content .left-side .text {
+                    font-size: 5rem;
+                    line-height: 100px;
+                }
+                .main-content .left-side .text h1 {
+                    font-size: 5rem;
+                }
+            }
+
+            @media only screen and (max-width: 992px) {
+                .main-content .left-side .text {
+                    font-size: 3rem;
+                    line-height: 68px;
+                }
+                .main-content .left-side .text h1 {
+                    font-size: 3rem;
+                }
+            }
+
+            @media only screen and (max-width: 768px) {
+            /* main content section starts here */
+            .main-content {
+                overflow: auto;
+                padding-top: 48px;
+            }
+            .main-content .left-side {
+                width: 100%;
+            }
+            .main-content .left-side .text {
+                margin-top: 80px;
+            }
+            .main-content .right-side {
+                text-align: right;
+                -webkit-box-align: end;
+                    -ms-flex-align: end;
+                        align-items: flex-end;
+                width: 100%;
+            }
+            .main-content .right-side .img img {
+                width: 68%;
+            }
+            /* main content section ends here */
+            }
+
+            @media only screen and (max-width: 425px) {
+            .main-content .right-side .img img {
+                width: 80%;
+            }
+            }
+        </style>
 </head>
 <body>
     
@@ -61,7 +172,8 @@
             <ul>
                 <li class="active" id="home"><a href="index.html">Home</a></li>
                 <li><a href="https://www.linkedin.com/in/yusuf-ansari-281118157/">About</a></li>
-                <li><a href="https://yusuf0786.github.io/portfolio/">Portfolio</a></li>
+                <li><a href="work/index.html">Work</a></li>
+                <!-- <li><a href="https://yusuf0786.github.io/portfolio/">Portfolio</a></li> -->
                 <li><a href="contact/index.html">Contact</a></li>
             </ul>
 
@@ -71,126 +183,23 @@
         </nav>
     </header>
 
-    <section class="sec1">
+    <main class="main-content">
+		<div class="left-side">
+			<div class="text">
+				<p class="white">Hello&period;</p>
+				<p>I'm</p>
+				<h1>Yusuf</h1>
+			</div>
+		</div>
 
-        <iframe src="iframe.html" title="projects showcase page" frameborder="0"></iframe>
-        
-        <div class="slider-img-container">
-            <div class="slider-img">
-                <a href="#" style="--i:1;" title="Layla website" ><img src="img/layla_furniture.png" alt=""></a>
-                <a href="#" style="--i:2;" title="Zaza website" ><img src="img/Zaza.png" alt=""></a>
-                <a href="#" style="--i:3;" title="Alchemy website" ><img src="img/Alchemy.png" alt=""></a>
-                <a href="#" style="--i:4;" title="Cascade website" ><img src="img/Cascade.png" alt=""></a>
-                <a href="#" style="--i:5;" title="Megacorp website" ><img src="img/megacorp.png" alt=""></a>
-                <a href="#" style="--i:6;" title="Prism website" ><img src="img/prism.png" alt=""></a>
-                <a href="#" style="--i:7;" title="Theory website" ><img src="img/theory.png" alt=""></a>
-                <a href="#" style="--i:8;" title="Alchemy website" ><img src="img/Alchemy.png" alt=""></a>
-            </div>
-        </div>
+		<div class="right-side">
+			<div class="img">
+				<img src="img/myimg.png" alt="yusuf image">
+			</div>
+		</div>
+	</main>
 
-        <section class="sec1_inside">
-            <div class="sec1_click text_color_anima" id="click_to_main">
-                <h3><span class="fa fa-angle-double-down"></span> <b>Click</b> or <b>Scroll down</b> See my work <span class="fa fa-angle-double-down"></span></h3>
-            </div>
-        </section>
-    </section>
-
-    <main id="sec_main">
-
-        <section>
-            <div class="back_btn"><span class="fa fa-angle-left"></span> <span>&nbsp;</span> <span>Back</span> </div>
-            <div class="mytop" id="mytop"></div>
     
-            <figure class="layouts">
-                <a href="https://yusuf0786.github.io/Alchemy/" target="_blank" id="layout2">
-                    <img src="img/Alchemy.png" alt="Layout1">
-                </a>
-                <figcaption>
-                    <h1>Alchemy</h1>
-                    <p>This website I created using <b>Bootstrap 5</b> framework of CSS3 with <b>custom navigation</b>.</p>
-                    <p>I have used <b>CSS3 animations</b> and <b>flex</b> to customise and make it interesting.</p>
-                </figcaption>
-            </figure>
-    
-            <!-- <figure class="layouts">
-                <a href="https://yusuf0786.github.io/georgia/" target="_blank" id="layout3">
-                    <img src="img/georgia.png" alt="Layout3">
-                </a>
-                <figcaption>
-                    <h1>Georgia</h1>
-                    <p>This is developed using <b>HTML</b> & <b>SCSS</b> only, toggle button functionality is working using css, no JS or jQuery is used</p>
-                </figcaption>
-            </figure> -->
-    
-            <figure class="layouts">
-                <a href="https://yusuf0786.github.io/cascade-grid/" target="_blank" id="layout4">
-                    <img src="img/Cascade.png" alt="Layout1">
-                </a>
-                <figcaption>
-                    <h1>Cascade</h1>
-                    <p>To create this website I have used <b>CSS grid</b> and <b>JavaScript</b> and <b>jQuery</b> for the functionality</p>
-                </figcaption>
-            </figure>
-
-            <figure class="layouts">
-                <a href="https://yusuf0786.github.io/prism/" target="_blank" id="layout6">
-                    <img src="img/prism.png" alt="Layout1">
-                </a>
-                <figcaption>
-                    <h1>Prism</h1>
-                    <p>It's a webpage without navigation, I have created it using <b>Bootstrap 3</b> and <b>CSS3 animations</b> also this webpage scroll feature which toggle's section, using JS scroll function.</p>
-                </figcaption>
-            </figure>
-    
-            <figure class="layouts">
-                <a href="https://yusuf0786.github.io/megacorp/" target="_blank" id="layout5">
-                    <img src="img/megacorp.png" alt="Layout1">
-                </a>
-                <figcaption>
-                    <h1>Megacorp</h1>
-                    <p>Technology used in this website is <b>Bootstrap 3</b>, this is a prity complex layout, I enjoyed developing it. Have a look!. </p>
-                </figcaption>
-            </figure>
-
-            <figure class="layouts">
-                <a href="https://yusuf0786.github.io/Layla_furniture/" target="_blank" id="layout1">
-                    <img src="img/layla_furniture.png" alt="Layout1">
-                </a>
-                <figcaption>
-                    <h1>Layla Furniture</h1>
-                    <p>In This website I have used <b>CSS float</b> technology and <b>Vanilla JavaScript</b> to create and <b>CSS3 animations</b> and <b>Bootstrap carousal</b>.</p>
-                </figcaption>
-            </figure>
-    
-            <figure class="layouts">
-                <a href="https://yusuf0786.github.io/Theory/" target="_blank" id="layout7">
-                    <img src="img/theory.png" alt="Layout1">
-                </a>
-                <figcaption>
-                    <h1>Theory</h1>
-                    <p>This website I created using <b>CSS3 flex</b>, it is a simple basic website I created just for practice.</p>
-                </figcaption>
-            </figure>
-
-            <!-- <figure class="layouts">
-                <a href="https://yusuf0786.github.io/clothes-store/" target="_blank" id="layout8">
-                    <img src="img/clothes-store.png" alt="Layout3">
-                </a>
-                <figcaption>
-                    <h1>Clothes Store</h1>
-                    <p>I developed this using <b>HTML</b> & <b>SCSS</b> only</p>
-                    <p>Featured Products hover & Slide functionality is working using css, not using JS or jQuery</p>
-                </figcaption>
-            </figure> -->
-        </section>
-
-        <div class="back_to_top">
-            <a href="#mytop">
-                <span class="fa fa-arrow-up"></span>
-            </a>
-        </div>
-
-    </main>
 
 </body>
 </html>

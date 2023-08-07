@@ -55,7 +55,7 @@ nav ul li {
   list-style-type: none;
   margin-right: 20px;
   padding: 5px 10px;
-  border: 1px solid #0f0f0f;
+  border: 1px solid transparent;
   border-radius: 12px;
   color: cornflowerblue;
   transition-duration: 0.3s;
