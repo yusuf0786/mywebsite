@@ -104,12 +104,12 @@ let lt = gsap.timeline({
     pin: ".slider-img",
     onEnter: () => {
         gsap.to(".slider-img-container", {opacity:1})
-        gsap.to(".sec1_inside", {opacity:0})
+        gsap.to(".sec1_inside", {opacity:0, visibility: "hidden"})
         gsap.to(".sec1 > iframe", {opacity:0})
     },
     onLeaveBack: () => {
         gsap.to(".slider-img-container", {opacity:0})
-        gsap.to(".sec1_inside", {opacity:1})
+        gsap.to(".sec1_inside", {opacity:1, visibility: "visible"})
         gsap.to(".sec1 > iframe", {opacity:1})
     },
   }
