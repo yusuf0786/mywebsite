@@ -16,7 +16,6 @@ let MD = {
 myinputDate.setAttribute("value", `${MD.A}-${MD.B(datevar.getMonth()+1)}-${MD.C(datevar.getDate())}T${MD.D(datevar.getHours())}:${MD.E(datevar.getMinutes())}`)
 
 
-
 // click function
 
 nav_btn.addEventListener('click', function(){
@@ -66,6 +65,7 @@ function modalCloseNecessoryEffect() {
 let myform = document.querySelector("#myform")
 let C_name = document.querySelector("#company_name")
 let Y_name = document.querySelector("#your_name")
+let emailField = document.querySelector("#your_email")
 let interview_S = document.querySelector("#mydatetime")
 let date_on_pg = myinputDate.getAttribute("value")
 let message_box = document.querySelector("#message_box")
@@ -74,15 +74,28 @@ let error_ul = document.querySelector("#error_ul")
 myform.addEventListener("submit", function(event){
     let myarray = []
 
+    const emailValidate = (emailMatch) => {
+        return emailMatch.match(
+            /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+        );
+    };
+
     if(C_name.value === ""){ myarray.push("Company name is required") }
 
     if(Y_name.value === ""){ myarray.push("Your name is required") }
 
-    if(interview_S.value === date_on_pg) { myarray.push("Scheduling interview is required") }
+    !emailValidate(emailField.value) ? myarray.push("Your email is required") : null;
+
+    if(interview_S.value === date_on_pg) { myarray.push("Scheduling interview is required & it should not be same as pressent time") }
 
     if(message_box.value === ""){ myarray.push("Message is required") }
 
-    if(myarray.length > 0){ event.preventDefault() }
+    if(myarray.length > 0){
+        event.preventDefault()
+    } else {
+        event.preventDefault()
+        sendEmail()
+    }
 
     remove_error()
     show_error(myarray)
@@ -105,4 +118,18 @@ function show_error(myarray) {
         error_ul.appendChild(li)
     }
     if(myarray.length > 0){ error_ul.style.display = "block" }
+}
+
+function sendEmail() {
+    alert("ok")
+    // var params = {
+    //     company_name : document.getElementById("company_name").value,
+    //     from_name : document.getElementById("your_name").value,
+    //     email : document.getElementById("your_email").value,
+    //     scheduleInterview : document.getElementById("mydatetime").value,
+    //     message : document.getElementById("message_box").value,
+    // }
+    // emailjs.send("service_y6yd1c4", "template_5xdudaj", params).then(function (resolve){
+    //     alert(`Thanks ${document.getElementById("your_name").value}, Email is Sent, I will get back to you soon!`);
+    // })
 }

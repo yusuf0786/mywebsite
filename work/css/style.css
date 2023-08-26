@@ -21,7 +21,8 @@ header {
   top: 0;
   left: 0;
   z-index: 99999;
-  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
   box-shadow: inset 0px -1px 1px #1F262E;
 }
 
@@ -271,7 +272,8 @@ main .layouts {
   width: 100%;
   height: 100%;
   border-radius: 10px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   transition: 2s;
 }
 
@@ -290,7 +292,6 @@ main .layouts {
 /* animations starts here */
 .text_color_anima {
   /*         name, duration, timing function, delay, iteration count, fill mode */
-  -webkit-animation: text_color 3s linear 0s infinite both;
   animation: text_color 3s linear 0s infinite both;
 }
 
@@ -335,80 +336,66 @@ main .layouts {
 }
 
 .main_sec_anim {
-  -webkit-animation: main_sec_anim 0.5s linear 0s 1 both;
   animation: main_sec_anim 0.5s linear 0s 1 both;
 }
 
 @keyframes main_sec_anim {
   0% {
     opacity: 0;
-    -webkit-transform: translate(0, -5%) scale(0.9);
     transform: translate(0, -5%) scale(0.9);
   }
   75% {
     opacity: 1;
-    -webkit-transform: translate(0, 0) scale(0.9);
     transform: translate(0, 0) scale(0.9);
   }
   100% {
     opacity: 1;
-    -webkit-transform: translate(0, 0) scale(1);
     transform: translate(0, 0) scale(1);
   }
 }
 .main_sec_anim2 {
-  -webkit-animation: main_sec_anim2 0.5s linear 0s 1 both;
   animation: main_sec_anim2 0.5s linear 0s 1 both;
 }
 
 @keyframes main_sec_anim2 {
   0% {
     opacity: 1;
-    -webkit-transform: translate(0, 0) scale(1);
     transform: translate(0, 0) scale(1);
   }
   35% {
     opacity: 1;
-    -webkit-transform: translate(0, 0) scale(0.9);
     transform: translate(0, 0) scale(0.9);
   }
   100% {
     opacity: 0;
-    -webkit-transform: translate(-10%, 0) scale(0.9);
     transform: translate(-10%, 0) scale(0.9);
   }
 }
 .nav_open {
-  -webkit-animation: nav_open_anim 0.5s linear 0s 1 both;
   animation: nav_open_anim 0.5s linear 0s 1 both;
 }
 
 @keyframes nav_open_anim {
   0% {
     opacity: 0;
-    -webkit-transform: translate(0, -30px);
     transform: translate(0, -30px);
   }
   100% {
     opacity: 1;
-    -webkit-transform: translate(0, 0);
     transform: translate(0, 0);
   }
 }
 .nav_close {
-  -webkit-animation: nav_close_anim 0.5s linear 0s 1 both;
   animation: nav_close_anim 0.5s linear 0s 1 both;
 }
 
 @keyframes nav_close_anim {
   0% {
     opacity: 1;
-    -webkit-transform: translate(0, 0);
     transform: translate(0, 0);
   }
   100% {
     opacity: 0;
-    -webkit-transform: translate(0, -30px);
     transform: translate(0, -30px);
   }
 }
@@ -472,6 +459,4 @@ main .layouts {
   .slider-img a {
     transform: rotateY(calc(var(--i) * 45deg)) translateZ(145px);
   }
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

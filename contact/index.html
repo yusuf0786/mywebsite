@@ -16,6 +16,33 @@
     <!-- jQuery link here -->
     <!-- CSS link here -->
         <link rel="stylesheet" href="css/style.css">
+
+    <!-- <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script type="text/javascript">
+        let emailerHtml = `
+            <h1>GeeksforGeeks</h1>
+            <p>A computer science portal</p>
+        `;
+        function sendEmail() {
+          Email.send({
+            // Host: "smtp.gmail.com",
+            // Password: "gfzvguovomzjogwz",
+            SecureToken : "8e5aede4-de09-4178-9211-d959e787d0aa",
+            Host: "smtp.elasticemail.com",
+            Username: "yusssuf0786@gmail.com",
+            Password: "353824A26D98CEE8E0B98C48A9F60244FEF1",
+            // To: "yans04786@gmail.com",
+            // From: "yusssuf0786@gmail.com",
+            To: "yusssuf0786@gmail.com",
+            From: "yans04786@gmail.com",
+            Subject: "Sending Email using javascript",
+            Body: "Well that was easy!!",
+            Html: emailerHtml,
+          }).then(function (message) {
+                alert("mail sent successfully")
+            });
+        }
+    </script> -->
 </head>
 <body>
 
@@ -42,7 +69,7 @@
             <section class="wrapper">
                 <section class="common-section contact-section">
     
-                    <form action="index.html" target="_blank" method="post" id="myform">
+                    <form action="" target="_self" method="post" id="myform" novalidate>
         
                         <div class="form_grp">
                             <label for="company_name">Company name :</label>
@@ -53,6 +80,11 @@
                             <label for="your_name">Your name :</label>
                             <input type="text" name="your_name" autocomplete="on" id="your_name">
                         </div>
+
+                        <div class="form_grp">
+                            <label for="your_email">Email :</label>
+                            <input type="email" name="your_email" autocomplete="on" id="your_email">
+                        </div>
         
                         <div class="form_grp">
                             <label for="mydatetime">Schedule interview :</label>
@@ -61,16 +93,18 @@
         
                         <textarea name="message" autocomplete="off" id="message_box" cols="30" rows="10" form="myform" placeholder="Message"></textarea>
         
-                        <input type="submit">
+                        <!-- <input type="submit"> -->
+                        <input type="submit" id="send-email" value="Send Email" />
                         
                     </form>
         
                 </section>
         
                 <section class="common-section note-section">
+                    <p>I have finally learned to send the form to my email 😃 using email.js </p>
+                    <p>Please fill the form and email the details to me by clicking on <b>Send Email</b> button</p>
                     <ul id="error_ul"></ul>
         
-                    <p>Note : This contact page is for the demonstration purpose only if you fill this form and submit it will not gonna send the data anywhere, but soon I will add a google form link if you want to fill the form and send to me.</p>
                 </section>
             </section>
     
@@ -98,6 +132,12 @@
     </div>
 
     <script src="js/script.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"> </script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("3tu4dmZs4LnNmKN9l");
+        })();
+    </script>
 
 </body>
 </html>
