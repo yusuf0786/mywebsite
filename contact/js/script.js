@@ -92,6 +92,11 @@ myform.addEventListener("submit", function(event){
 
     if(myarray.length > 0){
         event.preventDefault()
+        document.querySelector(".note-section").scrollIntoView({
+            behavior: "smooth",
+            block: "end",           // vertical alignment
+            inline: "nearest",       // horizontal alignment
+        })
     } else {
         event.preventDefault()
         sendEmail()
@@ -121,15 +126,14 @@ function show_error(myarray) {
 }
 
 function sendEmail() {
-    alert("ok")
-    // var params = {
-    //     company_name : document.getElementById("company_name").value,
-    //     from_name : document.getElementById("your_name").value,
-    //     email : document.getElementById("your_email").value,
-    //     scheduleInterview : document.getElementById("mydatetime").value,
-    //     message : document.getElementById("message_box").value,
-    // }
-    // emailjs.send("service_y6yd1c4", "template_5xdudaj", params).then(function (resolve){
-    //     alert(`Thanks ${document.getElementById("your_name").value}, Email is Sent, I will get back to you soon!`);
-    // })
+    var params = {
+        company_name : document.getElementById("company_name").value,
+        from_name : document.getElementById("your_name").value,
+        email : document.getElementById("your_email").value,
+        scheduleInterview : document.getElementById("mydatetime").value,
+        message : document.getElementById("message_box").value,
+    }
+    emailjs.send("service_y6yd1c4", "template_5xdudaj", params).then(function (resolve){
+        alert(`Thanks ${document.getElementById("your_name").value}, Email is Sent, I will get back to you soon!`);
+    })
 }
