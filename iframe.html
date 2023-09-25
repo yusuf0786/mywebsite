@@ -31,15 +31,22 @@
              align-content: space-around;
          }
 
-         img {
-             width: 31%;
-             border-radius: 4px;
-             animation: imganime calc(var(--i) * 0.5s) linear 0s infinite forwards;
-             animation-direction: alternate;
+         .frame-image {
+            width: 31%;
+            border-radius: 4px;
+            animation: imganime calc(var(--i) * 0.8s) linear 0s infinite forwards;
+            animation-direction: alternate;
+         }
+
+         .frame-image img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
          }
          @keyframes imganime {
              0% {
-                 opacity: 0;
+                 opacity: 0.3;
                 transform: scale(1);
              }
              100% {
@@ -53,7 +60,7 @@
                 justify-content: center;
                 align-content: center;
              }
-            img {
+             .frame-image {
                 width: 50%;
             }
          }
@@ -65,12 +72,12 @@
 
     <div class="frame">
 
-        <img style="--i:2.5;" src="img/Alchemy.png" alt="">
-        <img style="--i:3;" src="img/Cascade.png" alt="">
-        <img style="--i:3.5;" src="img/Zaza.png" alt="">
-        <img style="--i:3.5;" src="img/megacorp.png" alt="">
-        <img style="--i:3;" src="img/prism.png" alt="">
-        <img style="--i:2.5;" src="img/layla_furniture.png" alt="">
+        <div style="--i:2.5;" class="frame-image"><img src="img/Alchemy.png" alt=""></div>
+        <div style="--i:3;" class="frame-image"><img src="img/delight.png" alt=""></div>
+        <div style="--i:3.5;" class="frame-image"><img src="img/georgia.png" alt=""></div>
+        <div style="--i:3;" class="frame-image"><img src="img/Cascade.png" alt=""></div>
+        <div style="--i:2.5;" class="frame-image"><img src="img/clothes-store.png" alt=""></div>
+        <div style="--i:3.5;" class="frame-image"><img src="img/megacorp.png" alt=""></div>
 
     </div>
     

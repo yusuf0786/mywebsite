@@ -79,13 +79,13 @@ main {
 
         .form_grp {
             &:nth-child(1){
-                @include form_grp(red);
+                @include form_grp(white);
             }
             &:nth-child(2){
-                @include form_grp(green);
+                @include form_grp(white);
             }
             &:nth-child(3){
-                @include form_grp(blue);
+                @include form_grp(white);
             }
 
             input {

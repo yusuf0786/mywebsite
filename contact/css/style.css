@@ -147,7 +147,7 @@ main form .form_grp:nth-child(1) {
   width: 100%;
   font-size: 1rem;
   font-weight: 400;
-  color: red;
+  color: white;
   letter-spacing: 1px;
   margin-bottom: 20px;
 }
@@ -155,7 +155,7 @@ main form .form_grp:nth-child(2) {
   width: 100%;
   font-size: 1rem;
   font-weight: 400;
-  color: green;
+  color: white;
   letter-spacing: 1px;
   margin-bottom: 20px;
 }
@@ -163,7 +163,7 @@ main form .form_grp:nth-child(3) {
   width: 100%;
   font-size: 1rem;
   font-weight: 400;
-  color: blue;
+  color: white;
   letter-spacing: 1px;
   margin-bottom: 20px;
 }

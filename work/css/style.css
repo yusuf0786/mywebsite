@@ -136,7 +136,8 @@ nav .btn_toggle {
 }
 
 .sec1_click {
-  font-size: 0.8rem;
+  padding-top: 1rem;
+  font-size: 1rem;
   text-align: center;
   cursor: pointer;
 }
@@ -291,8 +292,9 @@ main .layouts {
 
 /* animations starts here */
 .text_color_anima {
+  color: yellow;
+  text-shadow: -1px 3px 5px #fff;
   /*         name, duration, timing function, delay, iteration count, fill mode */
-  animation: text_color 3s linear 0s infinite both;
 }
 
 @keyframes text_color {
