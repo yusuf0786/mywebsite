@@ -1,6 +1,7 @@
+$(".header").load("../../header.html")
+
 // targetting the elements
 let mynav = document.querySelector("#mynav ul")
-let nav_btn = document.querySelector(".btn_toggle")
 let nav_toggled = false
 let myinputDate = document.querySelector('#mydatetime')
 
@@ -17,13 +18,12 @@ myinputDate.setAttribute("value", `${MD.A}-${MD.B(datevar.getMonth()+1)}-${MD.C(
 
 
 // click function
-
-nav_btn.addEventListener('click', function(){
+$(".btn_toggle").on('click', function() {
     !nav_toggled ? nav_open() : nav_close()
 })
 
 function nav_open(){
-    nav_btn.style.transform = "rotate(-90deg)"
+    $(".btn_toggle").css({'transform': 'rotate(-90deg)'})
 
     mynav.style.display = "flex"
     mynav.classList.remove("nav_close")
@@ -34,7 +34,7 @@ function nav_open(){
     nav_toggled = true
 }
 function nav_close(){
-    nav_btn.style.transform = "rotate(0deg)"
+    $(".btn_toggle").css({'transform': 'rotate(0deg)'})
 
     mynav.classList.remove("nav_open")
     mynav.classList.add("nav_close")

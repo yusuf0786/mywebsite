@@ -1,3 +1,5 @@
+$(".header").load('../../header.html');
+
 // targetting the elements
 let click_to_main = document.querySelector("#click_to_main")
 let sec_main = document.querySelector("#sec_main")
@@ -5,7 +7,6 @@ let layout_anchors = document.querySelectorAll("#sec_main a")
 let layout_imgs = document.querySelectorAll("#sec_main a img")
 let back_btn = document.querySelector(".back_btn")
 let mynav = document.querySelector("#mynav ul")
-let nav_btn = document.querySelector(".btn_toggle")
 let nav_toggled = false
 
 // click function
@@ -29,7 +30,7 @@ back_btn.addEventListener('click', function(){
     }, 500)
 })
 
-nav_btn.addEventListener('click', function(){
+$(".btn_toggle").on('click', function (){
     !nav_toggled ? nav_open() : nav_close()
 })
 
@@ -51,7 +52,7 @@ function mainsection_mause(a,b){
 }
 
 function nav_open(){
-    nav_btn.style.transform = "rotate(-90deg)"
+    $(".btn_toggle").css({'transform': 'rotate(-90deg)'})
 
     mynav.style.display = "flex"
     mynav.classList.remove("nav_close")
@@ -62,7 +63,7 @@ function nav_open(){
     nav_toggled = true
 }
 function nav_close(){
-    nav_btn.style.transform = "rotate(0deg)"
+    $(".btn_toggle").css({'transform': 'rotate(0deg)'})
 
     mynav.classList.remove("nav_open")
     mynav.classList.add("nav_close")
