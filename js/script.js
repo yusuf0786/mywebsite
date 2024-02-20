@@ -6,7 +6,6 @@ $(function(){
     let nav_toggled = false
 
     setTimeout(() => {
-        console.log($(".btn_toggle"));
         $(".btn_toggle").on('click', function () {
             !nav_toggled ? nav_open() : nav_close()  
         })
