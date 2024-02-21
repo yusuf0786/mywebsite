@@ -1,3 +1,22 @@
+@mixin defaultBtn($borderColor, $fontSize, $BGColor, $color, $hoverBGColor, $hoverColor) {
+    display: inline-block;
+    border: 1px solid $borderColor;
+    border-radius: 8px;
+    padding: 10px 15px;
+    font-size: $fontSize;
+    font-weight: 400;
+    cursor: pointer;
+    transition-duration: 0.5s;
+    background-color: $BGColor;
+    color: $color;
+    text-decoration: none;
+
+    &:hover {
+        background-color: $hoverBGColor;
+        color: $hoverColor;
+    }
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -9,6 +28,10 @@ html {
 }
 
 body {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
     // scroll-behavior: smooth;
     font-family: Arial, Helvetica, sans-serif;
     background-color: #000;
@@ -18,18 +41,20 @@ body {
 
 /* main section starts here */
 .main-content {
-width: 100%;
-min-height: 100%;
-position: absolute;
-z-index: -1;
-display: -webkit-box;
-display: -ms-flexbox;
-display: flex;
--webkit-box-orient: horizontal;
--webkit-box-direction: normal;
-    -ms-flex-flow: row wrap;
-        flex-flow: row wrap;
-overflow: hidden;
+
+    .main-content-content {
+        width: 100%;
+        height: 100%;
+        min-height: 100vh;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-flow: row wrap;
+                flex-flow: row wrap;
+        overflow: hidden;
+    }
 }
 
 .main-content .left-side, .main-content .right-side {
@@ -73,6 +98,54 @@ font-weight: 600;
 }
 
 /* main content section ends here */
+
+/* about section starts here */
+.about-section {
+    color: #fff;
+    margin-bottom: 1rem;
+    .about-container {
+        width: 95%;
+        max-width: 1280px;
+        margin: 0 auto;
+    }
+    .about-title {
+        margin-bottom: 0.5rem;
+    }
+    .about-description {
+        width: 100%;
+        max-width: 1052px;
+        margin-bottom: 1rem;
+        font-size: 1rem;
+        strong {
+            color: coral;
+        }
+    }
+    .about-list {
+        list-style-type: none;
+        margin-bottom: 1rem;
+        li {
+            margin-bottom: 0.5rem;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+        li span {
+            color: coral;
+        }
+        li a {
+            color: inherit;
+            text-decoration: none;
+        }
+    }
+    .about-btn {
+        @include defaultBtn(transparent, 0.8rem, #f0f0f0, #0f0f0f, red, #fff);
+    }
+}
+
+// footer CSS
+$waveImgPath: "../contact/img/wave.png";
+@import '../css/footer';
 
 .active {
     border: 1px solid cornflowerblue;

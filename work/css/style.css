@@ -228,8 +228,10 @@ main .layouts {
   transition-duration: 0.5s;
   transition-delay: 0s;
   transform-style: preserve-3d;
+  margin-bottom: 0.5rem;
 }
 .layouts a .layouts-image img {
+  border-radius: 4px;
   display: block;
   width: 100%;
   margin-bottom: 5px;
@@ -245,7 +247,7 @@ main .layouts {
   justify-content: center;
   font-weight: bold;
   transform: rotateY(0deg);
-  background-image: linear-gradient(180deg, rgb(45, 65, 207) 0%, rgb(15, 28, 112) 100%);
+  background-image: linear-gradient(180deg, rgb(45, 65, 207) 0%, rgb(15, 28, 112) 65%);
   color: #fff;
   transition-duration: 0.5s;
   transition-delay: 0s;
@@ -267,9 +269,12 @@ main .layouts {
   font-size: 0.55rem;
   text-align: left;
 }
+.layouts figcaption h1 {
+  margin-bottom: 5px;
+}
 .layouts figcaption h1,
 .layouts figcaption p {
-  margin-bottom: 5px;
+  line-height: 0.875rem;
 }
 .layouts figcaption p:last-child {
   margin-bottom: 0;
@@ -331,7 +336,7 @@ main .layouts {
 /* animations starts here */
 .text_color_anima {
   color: yellow;
-  text-shadow: -1px 3px 5px #fff;
+  text-shadow: -1px 3px 3px #0f0f0f;
   /*         name, duration, timing function, delay, iteration count, fill mode */
 }
 
