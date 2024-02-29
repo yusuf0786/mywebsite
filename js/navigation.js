@@ -29,6 +29,7 @@ $(function(){
             case "#about-section":
                 $($("#navigation-list").find("li")).removeClass("active")
                 $($("#navigation-list").find("#about")).addClass("active")
+                aboutNavClicked = true;
                 break;
         }
 
@@ -53,10 +54,10 @@ $(function(){
         //     $($("#navigation-list").find("#about")).addClass("active")
         // }
 
-        if (this.location.hash === "#about-section") {
-            $($("#navigation-list").find("li")).removeClass("active")
-            $($("#navigation-list").find("#about")).addClass("active")
-        }
+        // if (this.location.hash === "#about-section") {
+        //     $($("#navigation-list").find("li")).removeClass("active")
+        //     $($("#navigation-list").find("#about")).addClass("active")
+        // }
 
         if(aboutNavClicked) {
             history.pushState("", document.title, this.location.pathname + this.location.search);
