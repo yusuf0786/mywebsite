@@ -231,7 +231,7 @@ main .layouts {
   margin-bottom: 0.5rem;
 }
 .layouts a .layouts-image img {
-  border-radius: 4px;
+  border-radius: 8px;
   display: block;
   width: 100%;
   margin-bottom: 5px;
@@ -242,12 +242,13 @@ main .layouts {
   left: 0;
   right: 0;
   bottom: 0;
+  border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: bold;
   transform: rotateY(0deg);
-  background-image: linear-gradient(180deg, rgb(45, 65, 207) 0%, rgb(15, 28, 112) 65%);
+  background-image: linear-gradient(200deg, rgb(0, 0, 0) 45%, rgba(15, 28, 112, 0.7) 65%);
   color: #fff;
   transition-duration: 0.5s;
   transition-delay: 0s;
@@ -257,22 +258,62 @@ main .layouts {
   display: block;
   transform: scaleX(-1);
 }
+.layouts a .layouts-image-text .layouts-image-text-content {
+  padding: 1rem;
+  transform: scaleX(-1);
+}
+.layouts a .layouts-image-text .layouts-image-text-content h3 {
+  font-size: 0.875rem;
+}
+.layouts a .layouts-image-text .layouts-image-text-content p {
+  font-size: 0.75rem;
+  line-height: 28px;
+}
+.layouts a .layouts-image-text .layouts-image-text-content h3,
+.layouts a .layouts-image-text .layouts-image-text-content p {
+  margin-bottom: 0.375rem;
+}
+@media only screen and (max-width: 1024px) {
+  .layouts a .layouts-image-text .layouts-image-text-content h3 {
+    font-size: 0.625rem;
+  }
+  .layouts a .layouts-image-text .layouts-image-text-content p {
+    font-size: 0.5rem;
+    line-height: 24px;
+  }
+  .layouts a .layouts-image-text .layouts-image-text-content h3,
+  .layouts a .layouts-image-text .layouts-image-text-content p {
+    margin-bottom: 0.125rem;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .layouts a .layouts-image-text .layouts-image-text-content p {
+    display: none;
+    line-height: 20px;
+  }
+}
 .layouts a:hover .layouts-image {
   transform: rotateY(180deg);
 }
 .layouts a:hover .layouts-image-text {
   transform: rotateY(180deg);
 }
-.layouts figcaption {
+.layouts figcaption:not(.layouts-image-text) {
+  display: none;
   padding: 0 10px;
   color: coral;
   font-size: 0.55rem;
   text-align: left;
 }
-.layouts figcaption h1 {
+@media only screen and (max-width: 992px) {
+  .layouts figcaption:not(.layouts-image-text) {
+    display: block;
+  }
+}
+.layouts figcaption h3 {
   margin-bottom: 5px;
 }
-.layouts figcaption h1,
+.layouts figcaption h3,
 .layouts figcaption p {
   line-height: 0.875rem;
 }
