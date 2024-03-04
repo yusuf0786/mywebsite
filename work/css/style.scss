@@ -125,7 +125,7 @@ main .layouts {
             position: relative;
             backface-visibility: hidden;
             z-index: 1;
-            transition-duration: 0.5s;
+            transition-duration: 1s;
             transition-delay: 0s;
             transform-style: preserve-3d;
             margin-bottom: 0.5rem;
@@ -151,21 +151,23 @@ main .layouts {
             align-items: center;
             justify-content: center;
             font-weight: bold;
+            font-style: normal;
             transform: rotateY(0deg);
-            background-image: linear-gradient(200deg, rgba(0, 0, 0, 1) 45%, rgba(15, 28, 112, 0.7) 65%);
+            // background-image: linear-gradient(200deg, rgba(0, 0, 0, 1) 45%, rgba(15, 28, 112, 0.7) 65%);
+            background-image: linear-gradient(200deg, rgba(15, 28, 112, 0.7) 35%, transparent 65%);
             color: #fff;
 
-            transition-duration: 0.5s;
+            transition-duration: 1s;
             transition-delay: 0s;
             transform-style: preserve-3d;
 
             span {
                 display: block;
-                transform: scaleX(-1);
+                transform: scaleX(-1) translateZ(-30px);
             }
             .layouts-image-text-content {
                 padding: 1rem;
-                transform: scaleX(-1);
+                transform: scaleX(-1) translateZ(-30px);
                 h3 { font-size: 0.875rem; }
                 p {
                     font-size: 0.75rem;
