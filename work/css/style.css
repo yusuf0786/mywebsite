@@ -8,6 +8,19 @@ html {
   font-size: 25px;
 }
 
+:root {
+  --color-bg1: rgb(108, 0, 162);
+  --color-bg2: rgb(0, 17, 82);
+  --color1: 18, 113, 255;
+  --color2: 221, 74, 255;
+  --color3: 100, 220, 255;
+  --color4: 200, 50, 50;
+  --color5: 180, 180, 50;
+  --color-interactive: 140, 100, 255;
+  --circle-size: 80%;
+  --blending: hard-light;
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
   background-color: #000;
@@ -114,15 +127,175 @@ nav .btn_toggle {
   top: 0;
 }
 
-.sec1 iframe {
+.sec1 .bg-anim {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  border: 0;
+  background: linear-gradient(90deg, #845688, #6f6f77, #245eba, #0f2385);
+  background: linear-gradient(90deg, #1a011c, #020225, #245eba, #0f2385);
+  background-size: 800% 800%;
+  animation-name: bgAnim;
+  animation-delay: 0s;
+  animation-duration: 10s;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes bgAnim {
+  0% {
+    background-position: 0% 0%;
+  }
+  12.5% {
+    background-position: 25% 0%;
+  }
+  25% {
+    background-position: 50% 0%;
+  }
+  37.5% {
+    background-position: 75% 0%;
+  }
+  50% {
+    background-position: 100% 0%;
+  }
+  62.5% {
+    background-position: 75% 0%;
+  }
+  75% {
+    background-position: 50% 0%;
+  }
+  87.5% {
+    background-position: 25% 0%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+.sec1 .gradient-bg {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100vh;
   border: 0;
+  overflow: hidden;
+  background: linear-gradient(40deg, var(--color-bg1), var(--color-bg2));
+}
+.sec1 .gradient-bg svg {
+  display: none;
+}
+.sec1 .gradient-bg .gradients-container {
+  filter: url(#goo) blur(40px);
+  width: 100%;
+  height: 100%;
+}
+.sec1 .gradient-bg .g1 {
+  position: absolute;
+  background: radial-gradient(circle at center, rgba(var(--color1), 0.8) 0, rgba(var(--color1), 0) 50%) no-repeat;
+  mix-blend-mode: var(--blending);
+  width: var(--circle-size);
+  height: var(--circle-size);
+  top: calc(50% - var(--circle-size) / 2);
+  left: calc(50% - var(--circle-size) / 2);
+  transform-origin: center center;
+  animation: moveVertical 30s ease infinite;
+  opacity: 1;
+}
+.sec1 .gradient-bg .g2 {
+  position: absolute;
+  background: radial-gradient(circle at center, rgba(var(--color2), 0.8) 0, rgba(var(--color2), 0) 50%) no-repeat;
+  mix-blend-mode: var(--blending);
+  width: var(--circle-size);
+  height: var(--circle-size);
+  top: calc(50% - var(--circle-size) / 2);
+  left: calc(50% - var(--circle-size) / 2);
+  transform-origin: calc(50% - 400px);
+  animation: moveInCircle 20s reverse infinite;
+  opacity: 1;
+}
+.sec1 .gradient-bg .g3 {
+  position: absolute;
+  background: radial-gradient(circle at center, rgba(var(--color3), 0.8) 0, rgba(var(--color3), 0) 50%) no-repeat;
+  mix-blend-mode: var(--blending);
+  width: var(--circle-size);
+  height: var(--circle-size);
+  top: calc(50% - var(--circle-size) / 2 + 200px);
+  left: calc(50% - var(--circle-size) / 2 - 500px);
+  transform-origin: calc(50% + 400px);
+  animation: moveInCircle 40s linear infinite;
+  opacity: 1;
+}
+.sec1 .gradient-bg .g4 {
+  position: absolute;
+  background: radial-gradient(circle at center, rgba(var(--color4), 0.8) 0, rgba(var(--color4), 0) 50%) no-repeat;
+  mix-blend-mode: var(--blending);
+  width: var(--circle-size);
+  height: var(--circle-size);
+  top: calc(50% - var(--circle-size) / 2);
+  left: calc(50% - var(--circle-size) / 2);
+  transform-origin: calc(50% - 200px);
+  animation: moveHorizontal 40s ease infinite;
+  opacity: 0.7;
+}
+.sec1 .gradient-bg .g5 {
+  position: absolute;
+  background: radial-gradient(circle at center, rgba(var(--color5), 0.8) 0, rgba(var(--color5), 0) 50%) no-repeat;
+  mix-blend-mode: var(--blending);
+  width: calc(var(--circle-size) * 2);
+  height: calc(var(--circle-size) * 2);
+  top: calc(50% - var(--circle-size));
+  left: calc(50% - var(--circle-size));
+  transform-origin: calc(50% - 800px) calc(50% + 200px);
+  animation: moveInCircle 20s ease infinite;
+  opacity: 1;
+}
+.sec1 .gradient-bg .interactive {
+  position: absolute;
+  background: radial-gradient(circle at center, rgba(var(--color-interactive), 0.8) 0, rgba(var(--color-interactive), 0) 50%) no-repeat;
+  mix-blend-mode: var(--blending);
+  width: 100%;
+  height: 100%;
+  top: -50%;
+  left: -50%;
+  opacity: 0.7;
 }
 
+@keyframes moveInCircle {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes moveVertical {
+  0% {
+    transform: translateY(-50%);
+  }
+  50% {
+    transform: translateY(50%);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+@keyframes moveHorizontal {
+  0% {
+    transform: translateX(-50%) translateY(-10%);
+  }
+  50% {
+    transform: translateX(50%) translateY(10%);
+  }
+  100% {
+    transform: translateX(-50%) translateY(-10%);
+  }
+}
 .sec1 .sec1_inside {
   width: 100%;
   height: 100vh;
@@ -377,46 +550,24 @@ main .layouts {
 
 /* animations starts here */
 .text_color_anima {
-  color: yellow;
-  text-shadow: -1px 3px 3px #0f0f0f;
+  color: violet;
+  text-shadow: 0 0 5px #000, 0 0 5px violet;
+  transition: text-shadow 1s;
   /*         name, duration, timing function, delay, iteration count, fill mode */
 }
-
-@keyframes text_color {
-  0% {
-    color: cornflowerblue;
-  }
-  10% {
-    color: coral;
-  }
-  20% {
-    color: green;
-  }
-  30% {
-    color: violet;
-  }
-  40% {
-    color: purple;
-  }
-  50% {
-    color: yellow;
-  }
-  60% {
-    color: orange;
-  }
-  70% {
-    color: navy;
-  }
-  80% {
-    color: grey;
-  }
-  90% {
-    color: teal;
-  }
-  100% {
-    color: goldenrod;
-  }
+.text_color_anima span.fa {
+  transition: transform 1s;
 }
+.text_color_anima:hover {
+  text-shadow: 0 0 1px violet, 0 0 8px violet;
+}
+.text_color_anima:hover span.fa:first-child {
+  transform: rotateZ(-90deg);
+}
+.text_color_anima:hover span.fa:last-child {
+  transform: rotateZ(90deg);
+}
+
 .main_sec_anim {
   animation: main_sec_anim 0.5s linear 0s 1 both;
 }
