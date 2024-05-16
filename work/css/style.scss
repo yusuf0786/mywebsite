@@ -556,6 +556,12 @@ main .layouts {
 
 
 /* media queries starts here */
+@media only screen and (max-width:1200px) {
+    .layouts a .layouts-image-text .layouts-image-text-content p {
+        font-size: 0.5rem;
+        line-height: 20px;
+    }
+}
 @media only screen and (max-width:1024px) {
 
     .slider-img {

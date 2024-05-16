@@ -1,5 +1,6 @@
 * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
@@ -25,17 +26,27 @@ header {
   z-index: 99999;
   -webkit-backdrop-filter: blur(8px);
           backdrop-filter: blur(8px);
-  box-shadow: inset 0px -1px 1px #1F262E;
+  -webkit-box-shadow: inset 0px -1px 1px #1F262E;
+          box-shadow: inset 0px -1px 1px #1F262E;
 }
 
 nav {
   width: 100%;
   height: 80px;
   padding: 0 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 nav a {
@@ -49,8 +60,13 @@ nav a {
 }
 
 nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
 }
 
 nav ul li {
@@ -60,19 +76,22 @@ nav ul li {
   border: 1px solid transparent;
   border-radius: 12px;
   color: cornflowerblue;
-  transition-duration: 0.3s;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
 }
 
 nav ul li:hover {
   border: 1px solid cornflowerblue;
-  box-shadow: 0 0 2px 3px cornflowerblue;
+  -webkit-box-shadow: 0 0 2px 3px cornflowerblue;
+          box-shadow: 0 0 2px 3px cornflowerblue;
 }
 
 nav .btn_toggle {
   display: none;
   color: cornflowerblue;
   cursor: pointer;
-  transition-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
 }
 
 /* media query starts here */
@@ -90,6 +109,7 @@ nav .btn_toggle {
     display: block;
   }
 }
+
 @media only screen and (max-width: 426px) {
   header {
     height: 58px;
@@ -100,7 +120,10 @@ nav .btn_toggle {
   nav ul {
     top: 58px;
     height: 100vh;
-    flex-flow: column nowrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
   }
   nav ul li {
     margin: 0;
@@ -108,22 +131,31 @@ nav .btn_toggle {
     padding: 5px 10px;
   }
 }
+
 .active {
   border: 1px solid cornflowerblue;
   border-radius: 8px;
-  box-shadow: 0 0 5px 3px #fff;
+  -webkit-box-shadow: 0 0 5px 3px #fff;
+          box-shadow: 0 0 5px 3px #fff;
   background-color: cornflowerblue;
   color: #fff;
 }
 
 main .wrapper {
   padding: 100px 50px 0 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
 }
+
 main .common-section {
   width: 50%;
 }
+
 main .common-section ul {
   display: none;
   width: 90%;
@@ -134,15 +166,18 @@ main .common-section ul {
   padding: 20px;
   border-radius: 10px;
 }
+
 main .common-section ul li {
   margin: 0 0 0 43px;
 }
+
 main .common-section p {
   font-size: 0.8rem;
   font-weight: 400;
   color: red;
   margin: 33px 0 0 30px;
 }
+
 main form .form_grp:nth-child(1) {
   width: 100%;
   font-size: 1rem;
@@ -151,6 +186,7 @@ main form .form_grp:nth-child(1) {
   letter-spacing: 1px;
   margin-bottom: 20px;
 }
+
 main form .form_grp:nth-child(2) {
   width: 100%;
   font-size: 1rem;
@@ -159,6 +195,7 @@ main form .form_grp:nth-child(2) {
   letter-spacing: 1px;
   margin-bottom: 20px;
 }
+
 main form .form_grp:nth-child(3) {
   width: 100%;
   font-size: 1rem;
@@ -167,6 +204,7 @@ main form .form_grp:nth-child(3) {
   letter-spacing: 1px;
   margin-bottom: 20px;
 }
+
 main form .form_grp input {
   display: block;
   width: 100%;
@@ -174,6 +212,7 @@ main form .form_grp input {
   padding: 10px;
   border-radius: 10px;
 }
+
 main form textarea {
   display: block;
   width: 100%;
@@ -181,26 +220,31 @@ main form textarea {
   padding: 10px;
   border-radius: 10px;
 }
-main form input[type=submit] {
+
+main form input[type="submit"] {
   margin-top: 30px;
   border: 1px solid transparent;
   border-radius: 8px;
   padding: 10px 15px;
-  font-size: 0.8rem;
+  font-size: .8rem;
   font-weight: 400;
   cursor: pointer;
-  transition-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
   background-color: #f0f0f0;
   color: #0f0f0f;
 }
-main form input[type=submit]:hover {
+
+main form input[type="submit"]:hover {
   background-color: red;
   color: #fff;
 }
 
 .footer {
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgb(53, 134, 255) 65%);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), color-stop(65%, #3586ff));
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, #3586ff 65%);
 }
+
 .footer .footer-inner-wrapper {
   margin-top: 50px;
   position: relative;
@@ -208,48 +252,75 @@ main form input[type=submit]:hover {
   width: 100%;
   height: inherit;
 }
+
 .footer .footer-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
+
 .footer .social-icon,
 .footer .menu {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 10px 0;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
+
 .footer .social-icon__item,
 .footer .menu__item {
   list-style: none;
 }
+
 .footer .social-icon__link {
   font-size: 1rem;
   color: #fff;
   margin: 0 10px;
   display: inline-block;
+  -webkit-transition: 0.5s;
   transition: 0.5s;
 }
+
 .footer .social-icon__link:hover {
-  transform: translateY(-10px);
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
 }
+
 .footer p {
   color: #fff;
   margin: 15px 0 10px 0;
   font-size: 0.65rem;
   font-weight: 300;
 }
+
 .footer p a {
   color: #fff;
   font-weight: bold;
 }
+
 .footer p a:hover {
   text-decoration: none;
 }
+
 .footer .wave {
   display: none;
   position: absolute;
@@ -260,29 +331,46 @@ main form input[type=submit]:hover {
   background: url("../img/wave.png");
   background-size: 1000px 100px;
 }
+
 .footer .wave#wave1 {
   z-index: 99;
   opacity: 1;
   bottom: 0;
-  animation: animateWaves 4s linear infinite;
+  -webkit-animation: animateWaves 4s linear infinite;
+          animation: animateWaves 4s linear infinite;
 }
+
 .footer .wave#wave2 {
   z-index: 999;
   opacity: 0.5;
   bottom: 10px;
-  animation: animate 4s linear infinite !important;
+  -webkit-animation: animate 4s linear infinite !important;
+          animation: animate 4s linear infinite !important;
 }
+
 .footer .wave#wave3 {
   z-index: 1000;
   opacity: 0.2;
   bottom: 15px;
-  animation: animateWaves 3s linear infinite;
+  -webkit-animation: animateWaves 3s linear infinite;
+          animation: animateWaves 3s linear infinite;
 }
+
 .footer .wave#wave4 {
   z-index: 999;
   opacity: 0.7;
   bottom: 20px;
-  animation: animate 3s linear infinite;
+  -webkit-animation: animate 3s linear infinite;
+          animation: animate 3s linear infinite;
+}
+
+@-webkit-keyframes animateWaves {
+  0% {
+    background-position-x: 1000px;
+  }
+  100% {
+    background-position-x: 0px;
+  }
 }
 
 @keyframes animateWaves {
@@ -293,6 +381,16 @@ main form input[type=submit]:hover {
     background-position-x: 0px;
   }
 }
+
+@-webkit-keyframes animate {
+  0% {
+    background-position-x: -1000px;
+  }
+  100% {
+    background-position-x: 0px;
+  }
+}
+
 @keyframes animate {
   0% {
     background-position-x: -1000px;
@@ -301,6 +399,7 @@ main form input[type=submit]:hover {
     background-position-x: 0px;
   }
 }
+
 html, body {
   height: 100%;
 }
@@ -322,9 +421,9 @@ main, footer {
   main form .form_grp {
     font-size: 0.8rem !important;
   }
-  main form input[type=submit] {
+  main form input[type="submit"] {
     width: 100%;
-    font-size: 0.7rem;
+    font-size: .7rem;
   }
   main .common-section {
     width: 100%;
@@ -343,6 +442,7 @@ main, footer {
     font-size: 0.58rem;
   }
 }
+
 @media only screen and (max-width: 376px) {
   main {
     padding: 80px 30px 0 30px;
@@ -355,6 +455,7 @@ main, footer {
     margin: 0 0 0 23px;
   }
   main .common-section p {
-    font-size: 0.5rem;
+    font-size: 0.50rem;
   }
-}/*# sourceMappingURL=style.css.map */
+}
+/*# sourceMappingURL=style.css.map */
