@@ -1,5 +1,5 @@
 $(function(){
-    $(".header").load('../../header.html');
+    $(".header").load('../header.html');
 
     // targetting the elements
     let click_to_main = document.querySelector("#click_to_main")
