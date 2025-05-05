@@ -37,7 +37,6 @@ $(function(){
             if($(e.target).attr("href") === `${windowLocation.origin}/#about-section`) {
                 $($("#navigation-list").find("li")).removeClass("active")
                 $($("#navigation-list").find("#about")).addClass("active")
-                console.log(aboutNavClicked);
                 setTimeout(() => { aboutNavClicked = true; console.log(aboutNavClicked); }, 500);
             }
         })
