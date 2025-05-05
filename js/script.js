@@ -1,18 +1,20 @@
 $(function(){
 
-    $.get('../../header.html')
-        .done(function() {
-            $(".header").load('../../header.html');
-        })
-        .fail(function() {
-            $.get('../header.html')
-                .done(function() {
-                    $(".header").load('../header.html');
-                })
-                .fail(function() {
-                    $(".header").load('./header.html');
-                });
-        });
+    // $.get('../../header.html')
+    //     .done(function() {
+    //         $(".header").load('../../header.html');
+    //     })
+    //     .fail(function() {
+    //         $.get('../header.html')
+    //             .done(function() {
+    //                 $(".header").load('../header.html');
+    //             })
+    //             .fail(function() {
+    //                 $(".header").load('./header.html');
+    //             });
+    //     });
+
+    $(".header").load('../header.html');
 
     // targetting the elements
     let nav_toggled = false
