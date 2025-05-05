@@ -1,6 +1,6 @@
 $(function(){
 
-    $(".header").load('./header.html');
+    $(".header").load('../header.html');
 
     // targetting the elements
     let nav_toggled = false
